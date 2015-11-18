@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="43f9e8854fdb4fc0830ef9a7c39b7523" Name="Diagram1" ZoomLevel="144" >
+        <EntityTypeShape EntityType="GEventsModel.Agenda" Width="1.5" PointX="2.5" PointY="5.875" />
+        <EntityTypeShape EntityType="GEventsModel.Speaker" Width="1.5" PointX="0.5" PointY="5.375" />
+        <EntityTypeShape EntityType="GEventsModel.Seller" Width="1.5" PointX="9" PointY="10.25" />
+        <EntityTypeShape EntityType="GEventsModel.Buyer" Width="1.5" PointX="9.125" PointY="5.875" />
+        <EntityTypeShape EntityType="GEventsModel.Booth" Width="1.5" PointX="0.5" PointY="8.125" />
+        <EntityTypeShape EntityType="GEventsModel.User" Width="1.5" PointX="7.25" PointY="5.875" />
+        <EntityTypeShape EntityType="GEventsModel.UserTypes" Width="1.5" PointX="7.25" PointY="8.25" />
+        <EntityTypeShape EntityType="GEventsModel.Events" Width="1.5" PointX="2.5" PointY="8.375" />
+        <EntityTypeShape EntityType="GEventsModel.FeedBack" Width="1.5" PointX="4.875" PointY="7.125" />
+        <EntityTypeShape EntityType="GEventsModel.Company" Width="1.5" PointX="0.5" PointY="9.875" />
+        <EntityTypeShape EntityType="GEventsModel.SpeakerSchedule" Width="1.5" PointX="1.75" PointY="3.875" />
+        <EntityTypeShape EntityType="GEventsModel.EventType" Width="1.5" PointX="2.5" PointY="11" />
+        <EntityTypeShape EntityType="GEventsModel.Invitation" Width="1.5" PointX="10.5" PointY="8.125" />
+        <EntityTypeShape EntityType="GEventsModel.InvitationSchedule" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="GEventsModel.InvitationsRefused" Width="1.5" PointX="2.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
