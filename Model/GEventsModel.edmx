@@ -4,493 +4,493 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="GEventsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityContainer Name="GEventsModelStoreContainer">
-    <EntitySet Name="Agenda" EntityType="GEventsModel.Store.Agenda" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Speakers" EntityType="GEventsModel.Store.Speakers" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Sellers" EntityType="GEventsModel.Store.Sellers" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Buyers" EntityType="GEventsModel.Store.Buyers" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Booths" EntityType="GEventsModel.Store.Booths" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Users" EntityType="GEventsModel.Store.Users" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="UserTypes" EntityType="GEventsModel.Store.UserTypes" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Events" EntityType="GEventsModel.Store.Events" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="FeedBacks" EntityType="GEventsModel.Store.FeedBacks" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Companies" EntityType="GEventsModel.Store.Companies" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="SpeakerSchedules" EntityType="GEventsModel.Store.SpeakerSchedules" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="EventTypes" EntityType="GEventsModel.Store.EventTypes" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Invitations" EntityType="GEventsModel.Store.Invitations" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="InvitationSchedules" EntityType="GEventsModel.Store.InvitationSchedules" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="InvitationsRefuseds" EntityType="GEventsModel.Store.InvitationsRefuseds" store:Type="Tables" Schema="dbo" />
-  </EntityContainer>
-  <EntityType Name="Agenda">
-    <Key>
-      <PropertyRef Name="AgendaId" />
-    </Key>
-    <Property Name="AgendaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="AgendaDate" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Location" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Photo" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="AgendaTitle" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Speakers">
-    <Key>
-      <PropertyRef Name="SpeakerId" />
-    </Key>
-    <Property Name="SpeakerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Company" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Photo" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Bio" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ScheduleId" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Sellers">
-    <Key>
-      <PropertyRef Name="SellerId" />
-    </Key>
-    <Property Name="SellerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="CompanyId" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Photo" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Buyers">
-    <Key>
-      <PropertyRef Name="BuyerId" />
-    </Key>
-    <Property Name="BuyerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="CompanyId" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Photo" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Booths">
-    <Key>
-      <PropertyRef Name="BoothId" />
-    </Key>
-    <Property Name="BoothId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="BoothIdentifier" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Location" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Users">
-    <Key>
-      <PropertyRef Name="UserId" />
-    </Key>
-    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="UserTypeId" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="CompanyId" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Photo" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="UserTypes">
-    <Key>
-      <PropertyRef Name="TypeId" />
-    </Key>
-    <Property Name="TypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TypeValue" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Events">
-    <Key>
-      <PropertyRef Name="EventId" />
-    </Key>
-    <Property Name="EventId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="EventDate" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Location" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Photo" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="EventTitle" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="EventTypeId" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="FeedBacks">
-    <Key>
-      <PropertyRef Name="FeedBackId" />
-    </Key>
-    <Property Name="FeedBackId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FeebBack" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Rate" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Section" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Companies">
-    <Key>
-      <PropertyRef Name="CompanyId" />
-    </Key>
-    <Property Name="CompanyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="SpeakerSchedules">
-    <Key>
-      <PropertyRef Name="ScheduleId" />
-    </Key>
-    <Property Name="ScheduleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="EventId" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="EventTypes">
-    <Key>
-      <PropertyRef Name="EventTypeId" />
-    </Key>
-    <Property Name="EventTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="EventTypeValue" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Invitations">
-    <Key>
-      <PropertyRef Name="InvitationId" />
-    </Key>
-    <Property Name="InvitationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="BuyerId" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="SellerId" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="BoothId" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Date" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="InvitationSchedules">
-    <Key>
-      <PropertyRef Name="InvitationScheduleId" />
-    </Key>
-    <Property Name="InvitationScheduleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="BuyerId" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="SellerId" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="BoothId" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Date" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="InvitationsRefuseds">
-    <Key>
-      <PropertyRef Name="InvitationId" />
-    </Key>
-    <Property Name="InvitationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="BuyerId" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="SellerId" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="BoothId" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Date" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-</Schema></edmx:StorageModels>
+    <Schema Namespace="GEventsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Agenda">
+          <Key>
+            <PropertyRef Name="AgendaId" />
+          </Key>
+          <Property Name="AgendaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="AgendaDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="Location" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="Photo" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="AgendaTitle" Type="varchar" MaxLength="150" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Booths">
+          <Key>
+            <PropertyRef Name="BoothId" />
+          </Key>
+          <Property Name="BoothId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BoothIdentifier" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="Location" Type="varchar" MaxLength="300" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Buyers">
+          <Key>
+            <PropertyRef Name="BuyerId" />
+          </Key>
+          <Property Name="BuyerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="CompanyId" Type="int" Nullable="false" />
+          <Property Name="Photo" Type="varchar" MaxLength="300" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Companies">
+          <Key>
+            <PropertyRef Name="CompanyId" />
+          </Key>
+          <Property Name="CompanyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Events">
+          <Key>
+            <PropertyRef Name="EventId" />
+          </Key>
+          <Property Name="EventId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="EventDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="Location" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="Photo" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="EventTitle" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="EventTypeId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventTypes">
+          <Key>
+            <PropertyRef Name="EventTypeId" />
+          </Key>
+          <Property Name="EventTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EventTypeValue" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FeedBacks">
+          <Key>
+            <PropertyRef Name="FeedBackId" />
+          </Key>
+          <Property Name="FeedBackId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FeebBack" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="RateId" Type="int" Nullable="false" />
+          <Property Name="SectionId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Invitations">
+          <Key>
+            <PropertyRef Name="InvitationId" />
+          </Key>
+          <Property Name="InvitationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BuyerId" Type="int" Nullable="false" />
+          <Property Name="SellerId" Type="int" Nullable="false" />
+          <Property Name="BoothId" Type="int" Nullable="false" />
+          <Property Name="Date" Type="smalldatetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InvitationSchedules">
+          <Key>
+            <PropertyRef Name="InvitationScheduleId" />
+          </Key>
+          <Property Name="InvitationScheduleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BuyerId" Type="int" Nullable="false" />
+          <Property Name="SellerId" Type="int" Nullable="false" />
+          <Property Name="BoothId" Type="int" Nullable="false" />
+          <Property Name="Date" Type="smalldatetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InvitationsRefuseds">
+          <Key>
+            <PropertyRef Name="InvitationId" />
+          </Key>
+          <Property Name="InvitationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BuyerId" Type="int" Nullable="false" />
+          <Property Name="SellerId" Type="int" Nullable="false" />
+          <Property Name="BoothId" Type="int" Nullable="false" />
+          <Property Name="Date" Type="smalldatetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sellers">
+          <Key>
+            <PropertyRef Name="SellerId" />
+          </Key>
+          <Property Name="SellerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="CompanyId" Type="int" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="300" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Speakers">
+          <Key>
+            <PropertyRef Name="SpeakerId" />
+          </Key>
+          <Property Name="SpeakerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="Company" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="Photo" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="Bio" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="ScheduleId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SpeakerSchedules">
+          <Key>
+            <PropertyRef Name="ScheduleId" />
+          </Key>
+          <Property Name="ScheduleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EventId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserTypeId" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="CompanyId" Type="int" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="300" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserTypes">
+          <Key>
+            <PropertyRef Name="TypeId" />
+          </Key>
+          <Property Name="TypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeValue" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="GEventsModelStoreContainer">
+          <EntitySet Name="Agenda" EntityType="Self.Agenda" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Booths" EntityType="Self.Booths" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Buyers" EntityType="Self.Buyers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Companies" EntityType="Self.Companies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Events" EntityType="Self.Events" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EventTypes" EntityType="Self.EventTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FeedBacks" EntityType="Self.FeedBacks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Invitations" EntityType="Self.Invitations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InvitationSchedules" EntityType="Self.InvitationSchedules" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InvitationsRefuseds" EntityType="Self.InvitationsRefuseds" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sellers" EntityType="Self.Sellers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Speakers" EntityType="Self.Speakers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SpeakerSchedules" EntityType="Self.SpeakerSchedules" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserTypes" EntityType="Self.UserTypes" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="GEventsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="GEventsContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Agenda" EntityType="GEventsModel.Agenda" />
-          <EntitySet Name="Speakers" EntityType="GEventsModel.Speaker" />
-          <EntitySet Name="Sellers" EntityType="GEventsModel.Seller" />
-          <EntitySet Name="Buyers" EntityType="GEventsModel.Buyer" />
-          <EntitySet Name="Booths" EntityType="GEventsModel.Booth" />
-          <EntitySet Name="Users" EntityType="GEventsModel.User" />
-          <EntitySet Name="UserTypes" EntityType="GEventsModel.UserTypes" />
+          <EntitySet Name="Booths" EntityType="GEventsModel.Booths" />
+          <EntitySet Name="Buyers" EntityType="GEventsModel.Buyers" />
+          <EntitySet Name="Companies" EntityType="GEventsModel.Companies" />
           <EntitySet Name="Events" EntityType="GEventsModel.Events" />
-          <EntitySet Name="FeedBacks" EntityType="GEventsModel.FeedBack" />
-          <EntitySet Name="Companies" EntityType="GEventsModel.Company" />
-          <EntitySet Name="SpeakerSchedules" EntityType="GEventsModel.SpeakerSchedule" />
-          <EntitySet Name="EventTypes" EntityType="GEventsModel.EventType" />
-          <EntitySet Name="Invitations" EntityType="GEventsModel.Invitation" />
-          <EntitySet Name="InvitationSchedules" EntityType="GEventsModel.InvitationSchedule" />
-          <EntitySet Name="InvitationsRefuseds" EntityType="GEventsModel.InvitationsRefused" />
+          <EntitySet Name="EventTypes" EntityType="GEventsModel.EventTypes" />
+          <EntitySet Name="FeedBacks" EntityType="GEventsModel.FeedBacks" />
+          <EntitySet Name="Invitations" EntityType="GEventsModel.Invitations" />
+          <EntitySet Name="InvitationSchedules" EntityType="GEventsModel.InvitationSchedules" />
+          <EntitySet Name="InvitationsRefuseds" EntityType="GEventsModel.InvitationsRefuseds" />
+          <EntitySet Name="Sellers" EntityType="GEventsModel.Sellers" />
+          <EntitySet Name="Speakers" EntityType="GEventsModel.Speakers" />
+          <EntitySet Name="SpeakerSchedules" EntityType="GEventsModel.SpeakerSchedules" />
+          <EntitySet Name="Users" EntityType="GEventsModel.Users" />
+          <EntitySet Name="UserTypes" EntityType="GEventsModel.UserTypes" />
         </EntityContainer>
         <EntityType Name="Agenda">
           <Key>
             <PropertyRef Name="AgendaId" />
           </Key>
           <Property Name="AgendaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="AgendaDate" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Location" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Photo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="AgendaTitle" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="AgendaDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Location" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Photo" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="AgendaTitle" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="Speaker">
-          <Key>
-            <PropertyRef Name="SpeakerId" />
-          </Key>
-          <Property Name="SpeakerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="LastName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Company" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Photo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Bio" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="ScheduleId" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="Seller">
-          <Key>
-            <PropertyRef Name="SellerId" />
-          </Key>
-          <Property Name="SellerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="LastName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="CompanyId" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Photo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="Buyer">
-          <Key>
-            <PropertyRef Name="BuyerId" />
-          </Key>
-          <Property Name="BuyerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="LastName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="CompanyId" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Photo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="Booth">
+        <EntityType Name="Booths">
           <Key>
             <PropertyRef Name="BoothId" />
           </Key>
           <Property Name="BoothId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="BoothIdentifier" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Location" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="BoothIdentifier" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="User">
+        <EntityType Name="Buyers">
           <Key>
-            <PropertyRef Name="UserId" />
+            <PropertyRef Name="BuyerId" />
           </Key>
-          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UserTypeId" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="LastName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="CompanyId" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Photo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="BuyerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyId" Type="Int32" Nullable="false" />
+          <Property Name="Photo" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="UserTypes">
+        <EntityType Name="Companies">
           <Key>
-            <PropertyRef Name="TypeId" />
+            <PropertyRef Name="CompanyId" />
           </Key>
-          <Property Name="TypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TypeValue" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CompanyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Events">
           <Key>
             <PropertyRef Name="EventId" />
           </Key>
           <Property Name="EventId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="EventDate" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Location" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Photo" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="EventTitle" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="EventTypeId" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="EventDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Location" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Photo" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="EventTitle" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="EventTypeId" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityType Name="FeedBack">
-          <Key>
-            <PropertyRef Name="FeedBackId" />
-          </Key>
-          <Property Name="FeedBackId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FeebBack" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Rate" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Section" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="Company">
-          <Key>
-            <PropertyRef Name="CompanyId" />
-          </Key>
-          <Property Name="CompanyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="SpeakerSchedule">
-          <Key>
-            <PropertyRef Name="ScheduleId" />
-          </Key>
-          <Property Name="ScheduleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="EventId" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="EventType">
+        <EntityType Name="EventTypes">
           <Key>
             <PropertyRef Name="EventTypeId" />
           </Key>
           <Property Name="EventTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="EventTypeValue" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="EventTypeValue" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="Invitation">
+        <EntityType Name="FeedBacks">
+          <Key>
+            <PropertyRef Name="FeedBackId" />
+          </Key>
+          <Property Name="FeedBackId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FeebBack" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="RateId" Type="Int32" Nullable="false" />
+          <Property Name="SectionId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Invitations">
           <Key>
             <PropertyRef Name="InvitationId" />
           </Key>
           <Property Name="InvitationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="BuyerId" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="SellerId" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="BoothId" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Date" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="BuyerId" Type="Int32" Nullable="false" />
+          <Property Name="SellerId" Type="Int32" Nullable="false" />
+          <Property Name="BoothId" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
-        <EntityType Name="InvitationSchedule">
+        <EntityType Name="InvitationSchedules">
           <Key>
             <PropertyRef Name="InvitationScheduleId" />
           </Key>
           <Property Name="InvitationScheduleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="BuyerId" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="SellerId" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="BoothId" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Date" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BuyerId" Type="Int32" Nullable="false" />
+          <Property Name="SellerId" Type="Int32" Nullable="false" />
+          <Property Name="BoothId" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
-        <EntityType Name="InvitationsRefused">
+        <EntityType Name="InvitationsRefuseds">
           <Key>
             <PropertyRef Name="InvitationId" />
           </Key>
           <Property Name="InvitationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="BuyerId" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="SellerId" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="BoothId" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Date" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BuyerId" Type="Int32" Nullable="false" />
+          <Property Name="SellerId" Type="Int32" Nullable="false" />
+          <Property Name="BoothId" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
-      </Schema>
+        <EntityType Name="Sellers">
+          <Key>
+            <PropertyRef Name="SellerId" />
+          </Key>
+          <Property Name="SellerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyId" Type="Int32" Nullable="false" />
+          <Property Name="Photo" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Speakers">
+          <Key>
+            <PropertyRef Name="SpeakerId" />
+          </Key>
+          <Property Name="SpeakerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Company" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Photo" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Bio" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="ScheduleId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SpeakerSchedules">
+          <Key>
+            <PropertyRef Name="ScheduleId" />
+          </Key>
+          <Property Name="ScheduleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EventId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserTypeId" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyId" Type="Int32" Nullable="false" />
+          <Property Name="Photo" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="UserTypes">
+          <Key>
+            <PropertyRef Name="TypeId" />
+          </Key>
+          <Property Name="TypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeValue" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="GEventsModelStoreContainer" CdmEntityContainer="GEventsContext">
-    <EntitySetMapping Name="Agenda">
-      <EntityTypeMapping TypeName="IsTypeOf(GEventsModel.Agenda)">
-        <MappingFragment StoreEntitySet="Agenda">
-          <ScalarProperty Name="AgendaId" ColumnName="AgendaId" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="AgendaDate" ColumnName="AgendaDate" />
-          <ScalarProperty Name="Location" ColumnName="Location" />
-          <ScalarProperty Name="Photo" ColumnName="Photo" />
-          <ScalarProperty Name="AgendaTitle" ColumnName="AgendaTitle" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Speakers">
-      <EntityTypeMapping TypeName="IsTypeOf(GEventsModel.Speaker)">
-        <MappingFragment StoreEntitySet="Speakers">
-          <ScalarProperty Name="SpeakerId" ColumnName="SpeakerId" />
-          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-          <ScalarProperty Name="LastName" ColumnName="LastName" />
-          <ScalarProperty Name="Title" ColumnName="Title" />
-          <ScalarProperty Name="Company" ColumnName="Company" />
-          <ScalarProperty Name="Photo" ColumnName="Photo" />
-          <ScalarProperty Name="Bio" ColumnName="Bio" />
-          <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Sellers">
-      <EntityTypeMapping TypeName="IsTypeOf(GEventsModel.Seller)">
-        <MappingFragment StoreEntitySet="Sellers">
-          <ScalarProperty Name="SellerId" ColumnName="SellerId" />
-          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-          <ScalarProperty Name="LastName" ColumnName="LastName" />
-          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
-          <ScalarProperty Name="Photo" ColumnName="Photo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Buyers">
-      <EntityTypeMapping TypeName="IsTypeOf(GEventsModel.Buyer)">
-        <MappingFragment StoreEntitySet="Buyers">
-          <ScalarProperty Name="BuyerId" ColumnName="BuyerId" />
-          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-          <ScalarProperty Name="LastName" ColumnName="LastName" />
-          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
-          <ScalarProperty Name="Photo" ColumnName="Photo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Booths">
-      <EntityTypeMapping TypeName="IsTypeOf(GEventsModel.Booth)">
-        <MappingFragment StoreEntitySet="Booths">
-          <ScalarProperty Name="BoothId" ColumnName="BoothId" />
-          <ScalarProperty Name="BoothIdentifier" ColumnName="BoothIdentifier" />
-          <ScalarProperty Name="Location" ColumnName="Location" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="IsTypeOf(GEventsModel.User)">
-        <MappingFragment StoreEntitySet="Users">
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
-          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-          <ScalarProperty Name="LastName" ColumnName="LastName" />
-          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
-          <ScalarProperty Name="Photo" ColumnName="Photo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="UserTypes">
-      <EntityTypeMapping TypeName="IsTypeOf(GEventsModel.UserTypes)">
-        <MappingFragment StoreEntitySet="UserTypes">
-          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
-          <ScalarProperty Name="TypeValue" ColumnName="TypeValue" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Events">
-      <EntityTypeMapping TypeName="IsTypeOf(GEventsModel.Events)">
-        <MappingFragment StoreEntitySet="Events">
-          <ScalarProperty Name="EventId" ColumnName="EventId" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="EventDate" ColumnName="EventDate" />
-          <ScalarProperty Name="Location" ColumnName="Location" />
-          <ScalarProperty Name="Photo" ColumnName="Photo" />
-          <ScalarProperty Name="EventTitle" ColumnName="EventTitle" />
-          <ScalarProperty Name="EventTypeId" ColumnName="EventTypeId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="FeedBacks">
-      <EntityTypeMapping TypeName="IsTypeOf(GEventsModel.FeedBack)">
-        <MappingFragment StoreEntitySet="FeedBacks">
-          <ScalarProperty Name="FeedBackId" ColumnName="FeedBackId" />
-          <ScalarProperty Name="FeebBack" ColumnName="FeebBack" />
-          <ScalarProperty Name="Rate" ColumnName="Rate" />
-          <ScalarProperty Name="Section" ColumnName="Section" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Companies">
-      <EntityTypeMapping TypeName="IsTypeOf(GEventsModel.Company)">
-        <MappingFragment StoreEntitySet="Companies">
-          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="SpeakerSchedules">
-      <EntityTypeMapping TypeName="IsTypeOf(GEventsModel.SpeakerSchedule)">
-        <MappingFragment StoreEntitySet="SpeakerSchedules">
-          <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
-          <ScalarProperty Name="EventId" ColumnName="EventId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="EventTypes">
-      <EntityTypeMapping TypeName="IsTypeOf(GEventsModel.EventType)">
-        <MappingFragment StoreEntitySet="EventTypes">
-          <ScalarProperty Name="EventTypeId" ColumnName="EventTypeId" />
-          <ScalarProperty Name="EventTypeValue" ColumnName="EventTypeValue" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Invitations">
-      <EntityTypeMapping TypeName="IsTypeOf(GEventsModel.Invitation)">
-        <MappingFragment StoreEntitySet="Invitations">
-          <ScalarProperty Name="InvitationId" ColumnName="InvitationId" />
-          <ScalarProperty Name="BuyerId" ColumnName="BuyerId" />
-          <ScalarProperty Name="SellerId" ColumnName="SellerId" />
-          <ScalarProperty Name="BoothId" ColumnName="BoothId" />
-          <ScalarProperty Name="Date" ColumnName="Date" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="InvitationSchedules">
-      <EntityTypeMapping TypeName="IsTypeOf(GEventsModel.InvitationSchedule)">
-        <MappingFragment StoreEntitySet="InvitationSchedules">
-          <ScalarProperty Name="InvitationScheduleId" ColumnName="InvitationScheduleId" />
-          <ScalarProperty Name="BuyerId" ColumnName="BuyerId" />
-          <ScalarProperty Name="SellerId" ColumnName="SellerId" />
-          <ScalarProperty Name="BoothId" ColumnName="BoothId" />
-          <ScalarProperty Name="Date" ColumnName="Date" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="InvitationsRefuseds">
-      <EntityTypeMapping TypeName="IsTypeOf(GEventsModel.InvitationsRefused)">
-        <MappingFragment StoreEntitySet="InvitationsRefuseds">
-          <ScalarProperty Name="InvitationId" ColumnName="InvitationId" />
-          <ScalarProperty Name="BuyerId" ColumnName="BuyerId" />
-          <ScalarProperty Name="SellerId" ColumnName="SellerId" />
-          <ScalarProperty Name="BoothId" ColumnName="BoothId" />
-          <ScalarProperty Name="Date" ColumnName="Date" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-  </EntityContainerMapping>
+          <EntitySetMapping Name="Agenda">
+            <EntityTypeMapping TypeName="GEventsModel.Agenda">
+              <MappingFragment StoreEntitySet="Agenda">
+                <ScalarProperty Name="AgendaTitle" ColumnName="AgendaTitle" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="AgendaDate" ColumnName="AgendaDate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="AgendaId" ColumnName="AgendaId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Booths">
+            <EntityTypeMapping TypeName="GEventsModel.Booths">
+              <MappingFragment StoreEntitySet="Booths">
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="BoothIdentifier" ColumnName="BoothIdentifier" />
+                <ScalarProperty Name="BoothId" ColumnName="BoothId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Buyers">
+            <EntityTypeMapping TypeName="GEventsModel.Buyers">
+              <MappingFragment StoreEntitySet="Buyers">
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="BuyerId" ColumnName="BuyerId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Companies">
+            <EntityTypeMapping TypeName="GEventsModel.Companies">
+              <MappingFragment StoreEntitySet="Companies">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Events">
+            <EntityTypeMapping TypeName="GEventsModel.Events">
+              <MappingFragment StoreEntitySet="Events">
+                <ScalarProperty Name="EventTypeId" ColumnName="EventTypeId" />
+                <ScalarProperty Name="EventTitle" ColumnName="EventTitle" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="EventId" ColumnName="EventId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventTypes">
+            <EntityTypeMapping TypeName="GEventsModel.EventTypes">
+              <MappingFragment StoreEntitySet="EventTypes">
+                <ScalarProperty Name="EventTypeValue" ColumnName="EventTypeValue" />
+                <ScalarProperty Name="EventTypeId" ColumnName="EventTypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FeedBacks">
+            <EntityTypeMapping TypeName="GEventsModel.FeedBacks">
+              <MappingFragment StoreEntitySet="FeedBacks">
+                <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+                <ScalarProperty Name="RateId" ColumnName="RateId" />
+                <ScalarProperty Name="FeebBack" ColumnName="FeebBack" />
+                <ScalarProperty Name="FeedBackId" ColumnName="FeedBackId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Invitations">
+            <EntityTypeMapping TypeName="GEventsModel.Invitations">
+              <MappingFragment StoreEntitySet="Invitations">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="BoothId" ColumnName="BoothId" />
+                <ScalarProperty Name="SellerId" ColumnName="SellerId" />
+                <ScalarProperty Name="BuyerId" ColumnName="BuyerId" />
+                <ScalarProperty Name="InvitationId" ColumnName="InvitationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InvitationSchedules">
+            <EntityTypeMapping TypeName="GEventsModel.InvitationSchedules">
+              <MappingFragment StoreEntitySet="InvitationSchedules">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="BoothId" ColumnName="BoothId" />
+                <ScalarProperty Name="SellerId" ColumnName="SellerId" />
+                <ScalarProperty Name="BuyerId" ColumnName="BuyerId" />
+                <ScalarProperty Name="InvitationScheduleId" ColumnName="InvitationScheduleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InvitationsRefuseds">
+            <EntityTypeMapping TypeName="GEventsModel.InvitationsRefuseds">
+              <MappingFragment StoreEntitySet="InvitationsRefuseds">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="BoothId" ColumnName="BoothId" />
+                <ScalarProperty Name="SellerId" ColumnName="SellerId" />
+                <ScalarProperty Name="BuyerId" ColumnName="BuyerId" />
+                <ScalarProperty Name="InvitationId" ColumnName="InvitationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sellers">
+            <EntityTypeMapping TypeName="GEventsModel.Sellers">
+              <MappingFragment StoreEntitySet="Sellers">
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="SellerId" ColumnName="SellerId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Speakers">
+            <EntityTypeMapping TypeName="GEventsModel.Speakers">
+              <MappingFragment StoreEntitySet="Speakers">
+                <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+                <ScalarProperty Name="Bio" ColumnName="Bio" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="SpeakerId" ColumnName="SpeakerId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SpeakerSchedules">
+            <EntityTypeMapping TypeName="GEventsModel.SpeakerSchedules">
+              <MappingFragment StoreEntitySet="SpeakerSchedules">
+                <ScalarProperty Name="EventId" ColumnName="EventId" />
+                <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="GEventsModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserTypes">
+            <EntityTypeMapping TypeName="GEventsModel.UserTypes">
+              <MappingFragment StoreEntitySet="UserTypes">
+                <ScalarProperty Name="TypeValue" ColumnName="TypeValue" />
+                <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
@@ -503,7 +503,7 @@
     <edmx:Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
         <DesignerProperty Name="UseLegacyProvider" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />

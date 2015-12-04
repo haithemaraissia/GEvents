@@ -12,15 +12,12 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Speaker
+    public partial class Buyers
     {
-        public int SpeakerId { get; set; }
+        public int BuyerId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Title { get; set; }
-        public string Company { get; set; }
+        public int CompanyId { get; set; }
         public string Photo { get; set; }
-        public string Bio { get; set; }
-        public string ScheduleId { get; set; }
     }
 }

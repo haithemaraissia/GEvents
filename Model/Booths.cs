@@ -12,11 +12,10 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class FeedBack
+    public partial class Booths
     {
-        public int FeedBackId { get; set; }
-        public string FeebBack { get; set; }
-        public string Rate { get; set; }
-        public string Section { get; set; }
+        public int BoothId { get; set; }
+        public string BoothIdentifier { get; set; }
+        public string Location { get; set; }
     }
 }

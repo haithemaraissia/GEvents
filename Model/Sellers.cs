@@ -12,13 +12,12 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Sellers
     {
-        public int UserId { get; set; }
-        public string UserTypeId { get; set; }
+        public int SellerId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string CompanyId { get; set; }
+        public int CompanyId { get; set; }
         public string Photo { get; set; }
     }
 }

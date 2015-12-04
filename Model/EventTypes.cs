@@ -12,12 +12,9 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Buyer
+    public partial class EventTypes
     {
-        public int BuyerId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string CompanyId { get; set; }
-        public string Photo { get; set; }
+        public int EventTypeId { get; set; }
+        public string EventTypeValue { get; set; }
     }
 }

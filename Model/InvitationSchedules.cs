@@ -12,10 +12,12 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Booth
+    public partial class InvitationSchedules
     {
+        public int InvitationScheduleId { get; set; }
+        public int BuyerId { get; set; }
+        public int SellerId { get; set; }
         public int BoothId { get; set; }
-        public string BoothIdentifier { get; set; }
-        public string Location { get; set; }
+        public System.DateTime Date { get; set; }
     }
 }

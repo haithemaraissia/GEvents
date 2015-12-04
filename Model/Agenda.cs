@@ -16,7 +16,7 @@ namespace Model
     {
         public int AgendaId { get; set; }
         public string Description { get; set; }
-        public string AgendaDate { get; set; }
+        public System.DateTime AgendaDate { get; set; }
         public string Location { get; set; }
         public string Photo { get; set; }
         public string AgendaTitle { get; set; }

@@ -12,12 +12,9 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class InvitationSchedule
+    public partial class Companies
     {
-        public int InvitationScheduleId { get; set; }
-        public string BuyerId { get; set; }
-        public string SellerId { get; set; }
-        public string BoothId { get; set; }
-        public string Date { get; set; }
+        public int CompanyId { get; set; }
+        public string Name { get; set; }
     }
 }

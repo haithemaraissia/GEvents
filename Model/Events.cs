@@ -16,10 +16,10 @@ namespace Model
     {
         public int EventId { get; set; }
         public string Description { get; set; }
-        public string EventDate { get; set; }
+        public System.DateTime EventDate { get; set; }
         public string Location { get; set; }
         public string Photo { get; set; }
         public string EventTitle { get; set; }
-        public string EventTypeId { get; set; }
+        public int EventTypeId { get; set; }
     }
 }

@@ -26,19 +26,19 @@ namespace Model
         }
     
         public virtual DbSet<Agenda> Agenda { get; set; }
-        public virtual DbSet<Speaker> Speakers { get; set; }
-        public virtual DbSet<Seller> Sellers { get; set; }
-        public virtual DbSet<Buyer> Buyers { get; set; }
-        public virtual DbSet<Booth> Booths { get; set; }
-        public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<UserTypes> UserTypes { get; set; }
+        public virtual DbSet<Booths> Booths { get; set; }
+        public virtual DbSet<Buyers> Buyers { get; set; }
+        public virtual DbSet<Companies> Companies { get; set; }
         public virtual DbSet<Events> Events { get; set; }
-        public virtual DbSet<FeedBack> FeedBacks { get; set; }
-        public virtual DbSet<Company> Companies { get; set; }
-        public virtual DbSet<SpeakerSchedule> SpeakerSchedules { get; set; }
-        public virtual DbSet<EventType> EventTypes { get; set; }
-        public virtual DbSet<Invitation> Invitations { get; set; }
-        public virtual DbSet<InvitationSchedule> InvitationSchedules { get; set; }
-        public virtual DbSet<InvitationsRefused> InvitationsRefuseds { get; set; }
+        public virtual DbSet<EventTypes> EventTypes { get; set; }
+        public virtual DbSet<FeedBacks> FeedBacks { get; set; }
+        public virtual DbSet<Invitations> Invitations { get; set; }
+        public virtual DbSet<InvitationSchedules> InvitationSchedules { get; set; }
+        public virtual DbSet<InvitationsRefuseds> InvitationsRefuseds { get; set; }
+        public virtual DbSet<Sellers> Sellers { get; set; }
+        public virtual DbSet<Speakers> Speakers { get; set; }
+        public virtual DbSet<SpeakerSchedules> SpeakerSchedules { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<UserTypes> UserTypes { get; set; }
     }
 }
