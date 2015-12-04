@@ -3,27 +3,27 @@ using Model;
 
 namespace DAL.Fake.Model
 {
-    public class FakeBooth
+    public class FakeBooths
     {
-        public List<Booth> MyBooth;
+        public List<Booths> MyBooths;
 
-        public FakeBooth()
+        public FakeBooths()
         {
             InitializeUserTypeList();
         }
 
         public void InitializeUserTypeList()
         {
-            MyBooth = new List<Booth> {
+            MyBooths = new List<Booths> {
                 FirstUserType(), 
                 SecondUserType(),
             };
         }
 
-        public Booth FirstUserType()
+        public Booths FirstUserType()
         {
 
-            var firstUserType = new Booth
+            var firstUserType = new Booths
             {
                 BoothId = 1,
                 BoothIdentifier = "A1",
@@ -32,9 +32,9 @@ namespace DAL.Fake.Model
             return firstUserType;
         }
 
-        public Booth SecondUserType()
+        public Booths SecondUserType()
         {
-            var secondUserType = new Booth
+            var secondUserType = new Booths
             {
                 BoothId = 2,
                 BoothIdentifier = "9",
@@ -43,9 +43,9 @@ namespace DAL.Fake.Model
             return secondUserType;
         }
 
-        public Booth ThirdUserType()
+        public Booths ThirdUserType()
         {
-            var thirdUserType = new Booth
+            var thirdUserType = new Booths
             {
                 BoothId = 3,
                 BoothIdentifier = "B1",
@@ -53,9 +53,9 @@ namespace DAL.Fake.Model
             };
             return thirdUserType;
         }
-        ~FakeBooth()
+        ~FakeBooths()
         {
-            MyBooth = null;
+            MyBooths = null;
         }
     }
 }

@@ -3,56 +3,56 @@ using Model;
 
 namespace DAL.Fake.Model
 {
-    public class FakeUserTypes
+    public class FakeEventTypes
     {
-        public List<UserTypes> MyUserTypes;
+        public List<EventTypes> MyEventTypes;
 
-        public FakeUserTypes()
+        public FakeEventTypes()
         {
             InitializeUserTypeList();
         }
 
         public void InitializeUserTypeList()
         {
-            MyUserTypes = new List<UserTypes> {
+            MyEventTypes = new List<EventTypes> {
                 FirstUserType(), 
                 SecondUserType(),
             };
         }
 
-        public UserTypes FirstUserType()
+        public EventTypes FirstUserType()
         {
 
-            var firstUserType = new UserTypes
+            var firstUserType = new EventTypes
             {
-                TypeId = 1,
-                TypeValue = Util.UserTypes.Values.Seller.ToString()
+                EventTypeId = 1,
+                EventTypeValue = ""
             };
             return firstUserType;
         }
 
-        public UserTypes SecondUserType()
+        public EventTypes SecondUserType()
         {
-            var secondUserType = new UserTypes
+            var secondUserType = new EventTypes
             {
-                TypeId = 2,
-                TypeValue = Util.UserTypes.Values.Buyer.ToString()
+                EventTypeId = 2,
+                EventTypeValue = ""
             };
             return secondUserType;
         }
 
-        public UserTypes ThirdUserType()
+        public EventTypes ThirdUserType()
         {
-            var thirdUserType = new UserTypes
+            var thirdUserType = new EventTypes
             {
-                TypeId = 3,
-                TypeValue = Util.UserTypes.Values.Admin.ToString()
+                EventTypeId = 3,
+                EventTypeValue = ""
             };
             return thirdUserType;
         }
-        ~FakeUserTypes()
+        ~FakeEventTypes()
         {
-            MyUserTypes = null;
+            MyEventTypes = null;
         }
     }
 }

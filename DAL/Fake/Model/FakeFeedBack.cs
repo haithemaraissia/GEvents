@@ -3,56 +3,56 @@ using Model;
 
 namespace DAL.Fake.Model
 {
-    public class FakeUserTypes
+    public class FakeFeedBacks
     {
-        public List<UserTypes> MyUserTypes;
+        public List<FeedBacks> MyFeedBacks;
 
-        public FakeUserTypes()
+        public FakeFeedBacks()
         {
             InitializeUserTypeList();
         }
 
         public void InitializeUserTypeList()
         {
-            MyUserTypes = new List<UserTypes> {
+            MyFeedBacks = new List<FeedBacks> {
                 FirstUserType(), 
                 SecondUserType(),
             };
         }
 
-        public UserTypes FirstUserType()
+        public FeedBacks FirstUserType()
         {
 
-            var firstUserType = new UserTypes
+            var firstUserType = new FeedBacks
             {
                 TypeId = 1,
-                TypeValue = Util.UserTypes.Values.Seller.ToString()
+                TypeValue = Util.FeedBacks.Values.Seller.ToString()
             };
             return firstUserType;
         }
 
-        public UserTypes SecondUserType()
+        public FeedBacks SecondUserType()
         {
-            var secondUserType = new UserTypes
+            var secondUserType = new FeedBacks
             {
                 TypeId = 2,
-                TypeValue = Util.UserTypes.Values.Buyer.ToString()
+                TypeValue = Util.FeedBacks.Values.Buyer.ToString()
             };
             return secondUserType;
         }
 
-        public UserTypes ThirdUserType()
+        public FeedBacks ThirdUserType()
         {
-            var thirdUserType = new UserTypes
+            var thirdUserType = new FeedBacks
             {
                 TypeId = 3,
-                TypeValue = Util.UserTypes.Values.Admin.ToString()
+                TypeValue = Util.FeedBacks.Values.Admin.ToString()
             };
             return thirdUserType;
         }
-        ~FakeUserTypes()
+        ~FakeFeedBacks()
         {
-            MyUserTypes = null;
+            MyFeedBacks = null;
         }
     }
 }

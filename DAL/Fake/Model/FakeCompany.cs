@@ -3,56 +3,56 @@ using Model;
 
 namespace DAL.Fake.Model
 {
-    public class FakeUserTypes
+    public class FakeCompanies
     {
-        public List<UserTypes> MyUserTypes;
+        public List<Companies> MyCompanies;
 
-        public FakeUserTypes()
+        public FakeCompanies()
         {
             InitializeUserTypeList();
         }
 
         public void InitializeUserTypeList()
         {
-            MyUserTypes = new List<UserTypes> {
+            MyCompanies = new List<Companies> {
                 FirstUserType(), 
                 SecondUserType(),
             };
         }
 
-        public UserTypes FirstUserType()
+        public Companies FirstUserType()
         {
 
-            var firstUserType = new UserTypes
+            var firstUserType = new Companies
             {
-                TypeId = 1,
-                TypeValue = Util.UserTypes.Values.Seller.ToString()
+                CompanyId = 1,
+                Name = ""
             };
             return firstUserType;
         }
 
-        public UserTypes SecondUserType()
+        public Companies SecondUserType()
         {
-            var secondUserType = new UserTypes
+            var secondUserType = new Companies
             {
-                TypeId = 2,
-                TypeValue = Util.UserTypes.Values.Buyer.ToString()
+                CompanyId = 2,
+                Name = ""
             };
             return secondUserType;
         }
 
-        public UserTypes ThirdUserType()
+        public Companies ThirdUserType()
         {
-            var thirdUserType = new UserTypes
+            var thirdUserType = new Companies
             {
-                TypeId = 3,
-                TypeValue = Util.UserTypes.Values.Admin.ToString()
+                CompanyId = 3,
+                Name = ""
             };
             return thirdUserType;
         }
-        ~FakeUserTypes()
+        ~FakeCompanies()
         {
-            MyUserTypes = null;
+            MyCompanies = null;
         }
     }
 }

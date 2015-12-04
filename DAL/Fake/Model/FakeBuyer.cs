@@ -3,27 +3,27 @@ using Model;
 
 namespace DAL.Fake.Model
 {
-    public class FakeBuyer
+    public class FakeBuyers
     {
-        public List<Buyer> MyBuyer;
+        public List<Buyers> MyBuyers;
 
-        public FakeBuyer()
+        public FakeBuyers()
         {
             InitializeUserTypeList();
         }
 
         public void InitializeUserTypeList()
         {
-            MyBuyer = new List<Buyer> {
+            MyBuyers = new List<Buyers> {
                 FirstUserType(), 
                 SecondUserType(),
             };
         }
 
-        public Buyer FirstUserType()
+        public Buyers FirstUserType()
         {
 
-            var firstUserType = new Buyer
+            var firstUserType = new Buyers
             {
                 BuyerId = 1,
                 FirstName = " ",
@@ -34,28 +34,34 @@ namespace DAL.Fake.Model
             return firstUserType;
         }
 
-        public Buyer SecondUserType()
+        public Buyers SecondUserType()
         {
-            var secondUserType = new Buyer
+            var secondUserType = new Buyers
             {
-                TypeId = 2,
-                TypeValue = Util.Buyer.Values.Buyer.ToString()
+                BuyerId = 2,
+                FirstName = " ",
+                LastName = "",
+                CompanyId = 1,
+                Photo = ""
             };
             return secondUserType;
         }
 
-        public Buyer ThirdUserType()
+        public Buyers ThirdUserType()
         {
-            var thirdUserType = new Buyer
+            var thirdUserType = new Buyers
             {
-                TypeId = 3,
-                TypeValue = Util.Buyer.Values.Admin.ToString()
+                BuyerId = 3,
+                FirstName = " ",
+                LastName = "",
+                CompanyId = 1,
+                Photo = ""
             };
             return thirdUserType;
         }
-        ~FakeBuyer()
+        ~FakeBuyers()
         {
-            MyBuyer = null;
+            MyBuyers = null;
         }
     }
 }
