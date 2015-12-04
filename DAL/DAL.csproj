@@ -74,6 +74,7 @@
     <Compile Include="Data\UnitofWork\UnitOfWork.cs" />
     <Compile Include="Fake\Generic\FakeGenericRepository.cs" />
     <Compile Include="Fake\Model\FakeEvents.cs" />
+    <Compile Include="Fake\Model\GoodData\FakeUserTypes - Copy.cs" />
     <Compile Include="Fake\Model\GoodData\FakeUserTypes.cs" />
     <Compile Include="Fake\Model\Util\UserTypes.cs" />
     <Compile Include="Fake\Repo\Repository\FakeEventsRepository.cs" />

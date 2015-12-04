@@ -1,0 +1,55 @@
+﻿Event List
+Speaker
+Schedule is the Agenda( which included the Events)
+
+Buyer
+     Swipe Seller
+     Confirm to meet a boot
+
+Seller
+     Swipe Buyer
+     Invite Seller to a boot
+
+Register
+     Form
+     Chat
+
+
+Tables Model:
+Feedback categories
+    Staff
+    Location
+    Speaker
+    Agenda
+    Events
+
+
+UserTypes
+     Seller
+     Customer
+     speaker
+
+EventTypes
+     BreakFast
+     Dinner
+     Lunch
+     Cocktail
+     Presentation
+
+
+Core
+
+Seller send 1 invitation to the buyer.
+
+Buyer Accept that invitation
+
+Seller and Buyer meet at the location and date of the invitation.
+
+Optional
+Both User see Agenda Schedule
+Both User see Events Schedule
+Both  Use see Selected Speaker Schedule
+
+
+
+
