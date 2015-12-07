@@ -9,46 +9,47 @@ namespace DAL.Fake.Model
 
         public FakeCompanies()
         {
-            InitializeUserTypeList();
+            InitializeCompaniesList();
         }
 
-        public void InitializeUserTypeList()
+        public void InitializeCompaniesList()
         {
             MyCompanies = new List<Companies> {
-                FirstUserType(), 
-                SecondUserType(),
+                FirstCompany(), 
+                SecondCompany(),
+                ThirdCompany()
             };
         }
 
-        public Companies FirstUserType()
+        public Companies FirstCompany()
         {
 
-            var firstUserType = new Companies
+            var firstCompanies = new Companies
             {
                 CompanyId = 1,
                 Name = ""
             };
-            return firstUserType;
+            return firstCompanies;
         }
 
-        public Companies SecondUserType()
+        public Companies SecondCompany()
         {
-            var secondUserType = new Companies
+            var secondCompanies = new Companies
             {
                 CompanyId = 2,
                 Name = ""
             };
-            return secondUserType;
+            return secondCompanies;
         }
 
-        public Companies ThirdUserType()
+        public Companies ThirdCompany()
         {
-            var thirdUserType = new Companies
+            var thirdCompanies = new Companies
             {
                 CompanyId = 3,
                 Name = ""
             };
-            return thirdUserType;
+            return thirdCompanies;
         }
         ~FakeCompanies()
         {

@@ -3,56 +3,65 @@ using Model;
 
 namespace DAL.Fake.Model
 {
-    public class FakeUserTypes
+    public class FakeSeller
     {
-        public List<UserTypes> MyUserTypes;
+        public List<Sellers> MySellers;
 
-        public FakeUserTypes()
+        public FakeSeller()
         {
-            InitializeUserTypeList();
+            InitializeSellersList();
         }
 
-        public void InitializeUserTypeList()
+        public void InitializeSellersList()
         {
-            MyUserTypes = new List<UserTypes> {
-                FirstUserType(), 
-                SecondUserType(),
+            MySellers = new List<Sellers> {
+                FirstSeller(), 
+                SecondSeller(),
+                ThirdSeller()
             };
         }
 
-        public UserTypes FirstUserType()
+        public Sellers FirstSeller()
         {
-
-            var firstUserType = new UserTypes
+            var firstSeller = new Sellers
             {
-                TypeId = 1,
-                TypeValue = Util.UserTypes.Values.Seller.ToString()
+                SellerId = 1,
+                FirstName = "",
+                LastName = "",
+                CompanyId = 1,
+                Photo = ""
             };
-            return firstUserType;
+            return firstSeller;
         }
 
-        public UserTypes SecondUserType()
+        public Sellers SecondSeller()
         {
-            var secondUserType = new UserTypes
+            var secondSeller = new Sellers
             {
-                TypeId = 2,
-                TypeValue = Util.UserTypes.Values.Buyer.ToString()
+                SellerId = 1,
+                FirstName = "",
+                LastName = "",
+                CompanyId = 1,
+                Photo = ""
             };
-            return secondUserType;
+            return secondSeller;
         }
 
-        public UserTypes ThirdUserType()
+        public Sellers ThirdSeller()
         {
-            var thirdUserType = new UserTypes
+            var thirdSeller = new Sellers
             {
-                TypeId = 3,
-                TypeValue = Util.UserTypes.Values.Admin.ToString()
+                SellerId = 1,
+                FirstName = "",
+                LastName = "",
+                CompanyId = 1,
+                Photo = ""
             };
-            return thirdUserType;
+            return thirdSeller;
         }
-        ~FakeUserTypes()
+        ~FakeSeller()
         {
-            MyUserTypes = null;
+            MySellers = null;
         }
     }
 }

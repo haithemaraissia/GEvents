@@ -1,58 +1,68 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Model;
 
 namespace DAL.Fake.Model
 {
-    public class FakeUserTypes
+    public class FakeInvitationSchedules
     {
-        public List<UserTypes> MyUserTypes;
+        public List<InvitationSchedules> MyInvitationSchedules;
 
-        public FakeUserTypes()
+        public FakeInvitationSchedules()
         {
-            InitializeUserTypeList();
+            InitializeInvitationScheduleList();
         }
 
-        public void InitializeUserTypeList()
+        public void InitializeInvitationScheduleList()
         {
-            MyUserTypes = new List<UserTypes> {
-                FirstUserType(), 
-                SecondUserType(),
+            MyInvitationSchedules = new List<InvitationSchedules> {
+                FirstInvitationSchedule(), 
+                SecondInvitationSchedule(),
+                ThirdInvitationSchedule()
             };
         }
 
-        public UserTypes FirstUserType()
+        public InvitationSchedules FirstInvitationSchedule()
         {
-
-            var firstUserType = new UserTypes
+            var firstInvitationSchedule = new InvitationSchedules
             {
-                TypeId = 1,
-                TypeValue = Util.UserTypes.Values.Seller.ToString()
+                InvitationScheduleId = 1,
+                BuyerId = 1,
+                SellerId = 1,
+                BoothId = 1,
+                Date = DateTime.Now.Date
             };
-            return firstUserType;
+            return firstInvitationSchedule;
         }
 
-        public UserTypes SecondUserType()
+        public InvitationSchedules SecondInvitationSchedule()
         {
-            var secondUserType = new UserTypes
+            var secondInvitationSchedule = new InvitationSchedules
             {
-                TypeId = 2,
-                TypeValue = Util.UserTypes.Values.Buyer.ToString()
+                InvitationScheduleId = 1,
+                BuyerId = 1,
+                SellerId = 1,
+                BoothId = 1,
+                Date = DateTime.Now.Date
             };
-            return secondUserType;
+            return secondInvitationSchedule;
         }
 
-        public UserTypes ThirdUserType()
+        public InvitationSchedules ThirdInvitationSchedule()
         {
-            var thirdUserType = new UserTypes
+            var thirdInvitationSchedule = new InvitationSchedules
             {
-                TypeId = 3,
-                TypeValue = Util.UserTypes.Values.Admin.ToString()
+                InvitationScheduleId = 1,
+                BuyerId = 1,
+                SellerId = 1,
+                BoothId = 1,
+                Date = DateTime.Now.Date
             };
-            return thirdUserType;
+            return thirdInvitationSchedule;
         }
-        ~FakeUserTypes()
+        ~FakeInvitationSchedules()
         {
-            MyUserTypes = null;
+            MyInvitationSchedules = null;
         }
     }
 }

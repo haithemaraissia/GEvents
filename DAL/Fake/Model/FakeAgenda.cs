@@ -18,6 +18,7 @@ namespace DAL.Fake.Model
             MyAgenda = new List<Agenda> {
                 FirstAgenda(), 
                 SecondAgenda(),
+                ThirdAgenda()
             };
         }
 
@@ -31,7 +32,7 @@ namespace DAL.Fake.Model
                 AgendaDate = DateTime.Today.Date,
                 Location = "",
                 Photo = "",
-                AgendaTitle = ""
+                AgendaTitle = "Market Fundamentals: 2:00-4:30pm"
             };
             return firstAgenda;
         }
@@ -41,11 +42,11 @@ namespace DAL.Fake.Model
             var secondAgenda = new Agenda
             {
                 AgendaId = 2,
-                Description = "",
+                Description = "The opening event for each Purchasing Seminar, this year's Sunday evening cocktail party will be hosted at Sprint Festival Plaza in Union Station.",
                 AgendaDate = DateTime.Today.Date.AddHours(2),
                 Location = "",
                 Photo = "",
-                AgendaTitle = ""
+                AgendaTitle = "Cocktails at Union Station"
             };
             return secondAgenda;
         }
@@ -55,11 +56,11 @@ namespace DAL.Fake.Model
             var thirdAgenda = new Agenda
             {
                 AgendaId = 3,
-                Description = "",
+                Description = "Paul Meyers, Chief Agricultural Economist.",
                 AgendaDate = DateTime.Today.Date.AddHours(1).AddDays(1),
                 Location = "",
                 Photo = "",
-                AgendaTitle = ""
+                AgendaTitle = "Wheat and World Prospects for New Crop: 9:05 - 9:50am"
             };
             return thirdAgenda;
         }

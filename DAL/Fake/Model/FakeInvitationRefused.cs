@@ -1,58 +1,68 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Model;
 
 namespace DAL.Fake.Model
 {
-    public class FakeUserTypes
+    public class FakeInvitationRefused
     {
-        public List<UserTypes> MyUserTypes;
+        public List<InvitationsRefuseds> MyInvitationRefused;
 
-        public FakeUserTypes()
+        public FakeInvitationRefused()
         {
-            InitializeUserTypeList();
+            InitializeInvitationsRefusedList();
         }
 
-        public void InitializeUserTypeList()
+        public void InitializeInvitationsRefusedList()
         {
-            MyUserTypes = new List<UserTypes> {
-                FirstUserType(), 
-                SecondUserType(),
+            MyInvitationRefused = new List<InvitationsRefuseds> {
+                FirstInvitationsRefused(), 
+                SecondInvitationsRefused(),
+                ThirdInvitationsRefused()
             };
         }
 
-        public UserTypes FirstUserType()
+        public InvitationsRefuseds FirstInvitationsRefused()
         {
-
-            var firstUserType = new UserTypes
+            var firstInvitationsRefused = new InvitationsRefuseds
             {
-                TypeId = 1,
-                TypeValue = Util.UserTypes.Values.Seller.ToString()
+                InvitationId = 1,
+                BuyerId = 1,
+                SellerId = 1,
+                BoothId = 1,
+                Date = DateTime.Today.Date
             };
-            return firstUserType;
+            return firstInvitationsRefused;
         }
 
-        public UserTypes SecondUserType()
+        public InvitationsRefuseds SecondInvitationsRefused()
         {
-            var secondUserType = new UserTypes
+            var secondInvitationsRefused = new InvitationsRefuseds
             {
-                TypeId = 2,
-                TypeValue = Util.UserTypes.Values.Buyer.ToString()
+                InvitationId = 2,
+                BuyerId = 1,
+                SellerId = 1,
+                BoothId = 1,
+                Date = DateTime.Today.Date
             };
-            return secondUserType;
+            return secondInvitationsRefused;
         }
 
-        public UserTypes ThirdUserType()
+        public InvitationsRefuseds ThirdInvitationsRefused()
         {
-            var thirdUserType = new UserTypes
+            var thirdInvitationsRefused = new InvitationsRefuseds
             {
-                TypeId = 3,
-                TypeValue = Util.UserTypes.Values.Admin.ToString()
+                InvitationId = 3,
+                BuyerId = 1,
+                SellerId = 1,
+                BoothId = 1,
+                Date = DateTime.Today.Date
             };
-            return thirdUserType;
+            return thirdInvitationsRefused;
         }
-        ~FakeUserTypes()
+        ~FakeInvitationRefused()
         {
-            MyUserTypes = null;
+            MyInvitationRefused = null;
         }
     }
 }

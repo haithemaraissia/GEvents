@@ -3,56 +3,69 @@ using Model;
 
 namespace DAL.Fake.Model
 {
-    public class FakeUserTypes
+    public class FakeUsers
     {
-        public List<UserTypes> MyUserTypes;
+        public List<Users> MyUsers;
 
-        public FakeUserTypes()
+        public FakeUsers()
         {
-            InitializeUserTypeList();
+            InitializeUsersList();
         }
 
-        public void InitializeUserTypeList()
+        public void InitializeUsersList()
         {
-            MyUserTypes = new List<UserTypes> {
-                FirstUserType(), 
-                SecondUserType(),
+            MyUsers = new List<Users> {
+                FirstUser(), 
+                SecondUser(),
+                ThirdUser()
             };
         }
 
-        public UserTypes FirstUserType()
+        public Users FirstUser()
         {
 
-            var firstUserType = new UserTypes
+            var firstUser = new Users
             {
-                TypeId = 1,
-                TypeValue = Util.UserTypes.Values.Seller.ToString()
+                UserId = 1, 
+                UserTypeId  = (int) Util.UserTypes.Values.Seller, 
+                FirstName  = "Mike", 
+                LastName  = "Smith", 
+                CompanyId  = 1, 
+                Photo  = ""
             };
-            return firstUserType;
+            return firstUser;
         }
 
-        public UserTypes SecondUserType()
+        public Users SecondUser()
         {
-            var secondUserType = new UserTypes
+            var secondUser = new Users
             {
-                TypeId = 2,
-                TypeValue = Util.UserTypes.Values.Buyer.ToString()
+                UserId = 1, 
+                UserTypeId  = (int) Util.UserTypes.Values.Seller, 
+                FirstName  = "Mike", 
+                LastName  = "Smith", 
+                CompanyId  = 1, 
+                Photo  = ""
             };
-            return secondUserType;
+            return secondUser;
         }
 
-        public UserTypes ThirdUserType()
+        public Users ThirdUser()
         {
-            var thirdUserType = new UserTypes
+            var thirdUser = new Users
             {
-                TypeId = 3,
-                TypeValue = Util.UserTypes.Values.Admin.ToString()
+                UserId = 1, 
+                UserTypeId  = (int) Util.UserTypes.Values.Seller, 
+                FirstName  = "Mike", 
+                LastName  = "Smith", 
+                CompanyId  = 1, 
+                Photo  = ""
             };
-            return thirdUserType;
+            return thirdUser;
         }
-        ~FakeUserTypes()
+        ~FakeUsers()
         {
-            MyUserTypes = null;
+            MyUsers = null;
         }
     }
 }

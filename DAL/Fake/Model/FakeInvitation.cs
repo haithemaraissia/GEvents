@@ -1,58 +1,68 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Model;
 
 namespace DAL.Fake.Model
 {
-    public class FakeUserTypes
+    public class FakeInvitations
     {
-        public List<UserTypes> MyUserTypes;
+        public List<Invitations> MyInvitations;
 
-        public FakeUserTypes()
+        public FakeInvitations()
         {
-            InitializeUserTypeList();
+            InitializeInvitationList();
         }
 
-        public void InitializeUserTypeList()
+        public void InitializeInvitationList()
         {
-            MyUserTypes = new List<UserTypes> {
-                FirstUserType(), 
-                SecondUserType(),
+            MyInvitations = new List<Invitations> {
+                FirstInvitation(), 
+                SecondInvitation(),
+                ThirdInvitation()
             };
         }
 
-        public UserTypes FirstUserType()
+        public Invitations FirstInvitation()
         {
-
-            var firstUserType = new UserTypes
+            var firstInvitation = new Invitations
             {
-                TypeId = 1,
-                TypeValue = Util.UserTypes.Values.Seller.ToString()
+                InvitationId = 1,
+                BuyerId = 1,
+                SellerId = 1,
+                BoothId = 1,
+                Date = DateTime.Today.Date
             };
-            return firstUserType;
+            return firstInvitation;
         }
 
-        public UserTypes SecondUserType()
+        public Invitations SecondInvitation()
         {
-            var secondUserType = new UserTypes
+            var secondInvitation = new Invitations
             {
-                TypeId = 2,
-                TypeValue = Util.UserTypes.Values.Buyer.ToString()
+                InvitationId = 2,
+                BuyerId = 1,
+                SellerId = 1,
+                BoothId = 1,
+                Date = DateTime.Today.Date
             };
-            return secondUserType;
+            return secondInvitation;
         }
 
-        public UserTypes ThirdUserType()
+        public Invitations ThirdInvitation()
         {
-            var thirdUserType = new UserTypes
+            var thirdInvitation = new Invitations
             {
-                TypeId = 3,
-                TypeValue = Util.UserTypes.Values.Admin.ToString()
+                InvitationId = 1,
+                BuyerId = 1,
+                SellerId = 1,
+                BoothId = 1,
+                Date = DateTime.Today.Date
             };
-            return thirdUserType;
+            return thirdInvitation;
         }
-        ~FakeUserTypes()
+        ~FakeInvitations()
         {
-            MyUserTypes = null;
+            MyInvitations = null;
         }
     }
 }

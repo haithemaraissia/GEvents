@@ -3,56 +3,74 @@ using Model;
 
 namespace DAL.Fake.Model
 {
-    public class FakeUserTypes
+    public class FakeSpeakers
     {
-        public List<UserTypes> MyUserTypes;
+        public List<Speakers> MySpeakers;
 
-        public FakeUserTypes()
+        public FakeSpeakers()
         {
             InitializeUserTypeList();
         }
 
         public void InitializeUserTypeList()
         {
-            MyUserTypes = new List<UserTypes> {
-                FirstUserType(), 
-                SecondUserType(),
+            MySpeakers = new List<Speakers> {
+                FirstSpeaker(), 
+                SecondSpeaker(),
+                ThirdSpeaker()
             };
         }
 
-        public UserTypes FirstUserType()
+        public Speakers FirstSpeaker()
         {
-
-            var firstUserType = new UserTypes
+            var firstSpeaker = new Speakers
             {
-                TypeId = 1,
-                TypeValue = Util.UserTypes.Values.Seller.ToString()
+                SpeakerId = 1,
+                FirstName = "",
+                LastName = "",
+                Title = "",
+                Company = "",
+                Photo = "",
+                Bio = "",
+                ScheduleId = 1
             };
-            return firstUserType;
+            return firstSpeaker;
         }
 
-        public UserTypes SecondUserType()
+        public Speakers SecondSpeaker()
         {
-            var secondUserType = new UserTypes
+            var secondSpeaker = new Speakers
             {
-                TypeId = 2,
-                TypeValue = Util.UserTypes.Values.Buyer.ToString()
+                SpeakerId = 1,
+                FirstName = "",
+                LastName = "",
+                Title = "",
+                Company = "",
+                Photo = "",
+                Bio = "",
+                ScheduleId = 1
             };
-            return secondUserType;
+            return secondSpeaker;
         }
 
-        public UserTypes ThirdUserType()
+        public Speakers ThirdSpeaker()
         {
-            var thirdUserType = new UserTypes
+            var thirdSpeaker = new Speakers
             {
-                TypeId = 3,
-                TypeValue = Util.UserTypes.Values.Admin.ToString()
+                SpeakerId = 1,
+                FirstName = "",
+                LastName = "",
+                Title = "",
+                Company = "",
+                Photo = "",
+                Bio = "",
+                ScheduleId = 1
             };
-            return thirdUserType;
+            return thirdSpeaker;
         }
-        ~FakeUserTypes()
+        ~FakeSpeakers()
         {
-            MyUserTypes = null;
+            MySpeakers = null;
         }
     }
 }

@@ -9,46 +9,52 @@ namespace DAL.Fake.Model
 
         public FakeFeedBacks()
         {
-            InitializeUserTypeList();
+            InitializeFeedBackList();
         }
 
-        public void InitializeUserTypeList()
+        public void InitializeFeedBackList()
         {
             MyFeedBacks = new List<FeedBacks> {
-                FirstUserType(), 
-                SecondUserType(),
+                FirstFeedBack(), 
+                SecondFeedBack(),
+                ThirdFeedBack()
             };
         }
 
-        public FeedBacks FirstUserType()
+        public FeedBacks FirstFeedBack()
         {
-
-            var firstUserType = new FeedBacks
+            var firstFeedBack = new FeedBacks
             {
-                TypeId = 1,
-                TypeValue = Util.FeedBacks.Values.Seller.ToString()
+                FeedBackId  = 1,
+                FeebBack ="",
+                RateId  = 1,
+                SectionId   = 1
             };
-            return firstUserType;
+            return firstFeedBack;
         }
 
-        public FeedBacks SecondUserType()
+        public FeedBacks SecondFeedBack()
         {
-            var secondUserType = new FeedBacks
+            var secondFeedBack = new FeedBacks
             {
-                TypeId = 2,
-                TypeValue = Util.FeedBacks.Values.Buyer.ToString()
+                FeedBackId = 1,
+                FeebBack = "",
+                RateId = 1,
+                SectionId = 1
             };
-            return secondUserType;
+            return secondFeedBack;
         }
 
-        public FeedBacks ThirdUserType()
+        public FeedBacks ThirdFeedBack()
         {
-            var thirdUserType = new FeedBacks
+            var thirdFeedBack = new FeedBacks
             {
-                TypeId = 3,
-                TypeValue = Util.FeedBacks.Values.Admin.ToString()
+                FeedBackId = 1,
+                FeebBack = "",
+                RateId = 1,
+                SectionId = 1
             };
-            return thirdUserType;
+            return thirdFeedBack;
         }
         ~FakeFeedBacks()
         {

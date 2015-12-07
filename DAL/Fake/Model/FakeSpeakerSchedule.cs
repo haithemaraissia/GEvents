@@ -3,56 +3,57 @@ using Model;
 
 namespace DAL.Fake.Model
 {
-    public class FakeUserTypes
+    public class FakeSpeakerSchedules
     {
-        public List<UserTypes> MyUserTypes;
+        public List<SpeakerSchedules> MySpeakerSchedules;
 
-        public FakeUserTypes()
+        public FakeSpeakerSchedules()
         {
-            InitializeUserTypeList();
+            InitializeSpeakerScheduleList();
         }
 
-        public void InitializeUserTypeList()
+        public void InitializeSpeakerScheduleList()
         {
-            MyUserTypes = new List<UserTypes> {
-                FirstUserType(), 
-                SecondUserType(),
+            MySpeakerSchedules = new List<SpeakerSchedules> {
+                FirstSpeakerSchedule(), 
+                SecondSpeakerSchedule(),
+                ThirdSpeakerSchedule()
+
             };
         }
 
-        public UserTypes FirstUserType()
+        public SpeakerSchedules FirstSpeakerSchedule()
         {
-
-            var firstUserType = new UserTypes
+            var firstSpeakerSchedule = new SpeakerSchedules
             {
-                TypeId = 1,
-                TypeValue = Util.UserTypes.Values.Seller.ToString()
+                ScheduleId = 1,
+                EventId = 1
             };
-            return firstUserType;
+            return firstSpeakerSchedule;
         }
 
-        public UserTypes SecondUserType()
+        public SpeakerSchedules SecondSpeakerSchedule()
         {
-            var secondUserType = new UserTypes
+            var secondSpeakerSchedule = new SpeakerSchedules
             {
-                TypeId = 2,
-                TypeValue = Util.UserTypes.Values.Buyer.ToString()
+                ScheduleId = 1,
+                EventId = 1
             };
-            return secondUserType;
+            return secondSpeakerSchedule;
         }
 
-        public UserTypes ThirdUserType()
+        public SpeakerSchedules ThirdSpeakerSchedule()
         {
-            var thirdUserType = new UserTypes
+            var thirdSpeakerSchedule = new SpeakerSchedules
             {
-                TypeId = 3,
-                TypeValue = Util.UserTypes.Values.Admin.ToString()
+                ScheduleId = 1,
+                EventId = 1
             };
-            return thirdUserType;
+            return thirdSpeakerSchedule;
         }
-        ~FakeUserTypes()
+        ~FakeSpeakerSchedules()
         {
-            MyUserTypes = null;
+            MySpeakerSchedules = null;
         }
     }
 }

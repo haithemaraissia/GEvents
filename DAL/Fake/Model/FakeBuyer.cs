@@ -9,21 +9,22 @@ namespace DAL.Fake.Model
 
         public FakeBuyers()
         {
-            InitializeUserTypeList();
+            InitializeBuyerList();
         }
 
-        public void InitializeUserTypeList()
+        public void InitializeBuyerList()
         {
             MyBuyers = new List<Buyers> {
-                FirstUserType(), 
-                SecondUserType(),
+                FirstBuyer(), 
+                SecondBuyer(),
+                ThirdBuyer()
             };
         }
 
-        public Buyers FirstUserType()
+        public Buyers FirstBuyer()
         {
 
-            var firstUserType = new Buyers
+            var firstBuyer = new Buyers
             {
                 BuyerId = 1,
                 FirstName = " ",
@@ -31,12 +32,12 @@ namespace DAL.Fake.Model
                 CompanyId = 1,
                 Photo = ""
             };
-            return firstUserType;
+            return firstBuyer;
         }
 
-        public Buyers SecondUserType()
+        public Buyers SecondBuyer()
         {
-            var secondUserType = new Buyers
+            var secondBuyer = new Buyers
             {
                 BuyerId = 2,
                 FirstName = " ",
@@ -44,12 +45,12 @@ namespace DAL.Fake.Model
                 CompanyId = 1,
                 Photo = ""
             };
-            return secondUserType;
+            return secondBuyer;
         }
 
-        public Buyers ThirdUserType()
+        public Buyers ThirdBuyer()
         {
-            var thirdUserType = new Buyers
+            var thirdBuyer = new Buyers
             {
                 BuyerId = 3,
                 FirstName = " ",
@@ -57,7 +58,7 @@ namespace DAL.Fake.Model
                 CompanyId = 1,
                 Photo = ""
             };
-            return thirdUserType;
+            return thirdBuyer;
         }
         ~FakeBuyers()
         {

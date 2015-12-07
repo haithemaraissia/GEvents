@@ -9,46 +9,47 @@ namespace DAL.Fake.Model
 
         public FakeEventTypes()
         {
-            InitializeUserTypeList();
+            InitializeEventTypeList();
         }
 
-        public void InitializeUserTypeList()
+        public void InitializeEventTypeList()
         {
             MyEventTypes = new List<EventTypes> {
-                FirstUserType(), 
-                SecondUserType(),
+                FirstEventType(), 
+                SecondEventType(),
+                ThirdEventType()
             };
         }
 
-        public EventTypes FirstUserType()
+        public EventTypes FirstEventType()
         {
 
-            var firstUserType = new EventTypes
+            var firstEventType = new EventTypes
             {
                 EventTypeId = 1,
                 EventTypeValue = ""
             };
-            return firstUserType;
+            return firstEventType;
         }
 
-        public EventTypes SecondUserType()
+        public EventTypes SecondEventType()
         {
-            var secondUserType = new EventTypes
+            var secondEventType = new EventTypes
             {
                 EventTypeId = 2,
                 EventTypeValue = ""
             };
-            return secondUserType;
+            return secondEventType;
         }
 
-        public EventTypes ThirdUserType()
+        public EventTypes ThirdEventType()
         {
-            var thirdUserType = new EventTypes
+            var thirdEventType = new EventTypes
             {
                 EventTypeId = 3,
                 EventTypeValue = ""
             };
-            return thirdUserType;
+            return thirdEventType;
         }
         ~FakeEventTypes()
         {

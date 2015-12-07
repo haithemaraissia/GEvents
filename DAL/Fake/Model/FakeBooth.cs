@@ -9,49 +9,50 @@ namespace DAL.Fake.Model
 
         public FakeBooths()
         {
-            InitializeUserTypeList();
+            InitializeBoothList();
         }
 
-        public void InitializeUserTypeList()
+        public void InitializeBoothList()
         {
             MyBooths = new List<Booths> {
-                FirstUserType(), 
-                SecondUserType(),
+                FirstBooth(), 
+                SecondBooth(),
+                ThirdBooth()
             };
         }
 
-        public Booths FirstUserType()
+        public Booths FirstBooth()
         {
 
-            var firstUserType = new Booths
+            var firstBooth = new Booths
             {
                 BoothId = 1,
                 BoothIdentifier = "A1",
                 Location = ""
             };
-            return firstUserType;
+            return firstBooth;
         }
 
-        public Booths SecondUserType()
+        public Booths SecondBooth()
         {
-            var secondUserType = new Booths
+            var secondBooth = new Booths
             {
                 BoothId = 2,
                 BoothIdentifier = "9",
                 Location = ""
             };
-            return secondUserType;
+            return secondBooth;
         }
 
-        public Booths ThirdUserType()
+        public Booths ThirdBooth()
         {
-            var thirdUserType = new Booths
+            var thirdBooth = new Booths
             {
                 BoothId = 3,
                 BoothIdentifier = "B1",
                 Location = ""
             };
-            return thirdUserType;
+            return thirdBooth;
         }
         ~FakeBooths()
         {
