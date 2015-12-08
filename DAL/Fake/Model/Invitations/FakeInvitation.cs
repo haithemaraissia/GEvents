@@ -41,7 +41,7 @@ namespace DAL.Fake.Model
             {
                 InvitationId = 2,
                 BuyerId = 1,
-                SellerId = 1,
+                SellerId = 2,
                 BoothId = 1,
                 Date = DateTime.Today.Date
             };
@@ -52,9 +52,9 @@ namespace DAL.Fake.Model
         {
             var thirdInvitation = new Invitations
             {
-                InvitationId = 1,
+                InvitationId = 3,
                 BuyerId = 1,
-                SellerId = 1,
+                SellerId = 3,
                 BoothId = 1,
                 Date = DateTime.Today.Date
             };
