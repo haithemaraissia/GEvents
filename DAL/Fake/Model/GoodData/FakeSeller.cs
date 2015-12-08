@@ -26,10 +26,10 @@ namespace DAL.Fake.Model
             var firstSeller = new Sellers
             {
                 SellerId = 1,
-                FirstName = "",
-                LastName = "",
+                FirstName = "Mike",
+                LastName = "Douglas",
                 CompanyId = 1,
-                Photo = ""
+                Photo = @"C:\Users\haraissia\Documents\Visual Studio 2013\Projects\GEvents\trunk\Test\Images\Seller\Company\business-company-logo.jpg"
             };
             return firstSeller;
         }
@@ -38,11 +38,11 @@ namespace DAL.Fake.Model
         {
             var secondSeller = new Sellers
             {
-                SellerId = 1,
-                FirstName = "",
-                LastName = "",
-                CompanyId = 1,
-                Photo = ""
+                SellerId = 2,
+                FirstName = "Robert",
+                LastName = "Smith",
+                CompanyId = 2,
+                Photo = @"C:\Users\haraissia\Documents\Visual Studio 2013\Projects\GEvents\trunk\Test\Images\Seller\Company\Company3_Logo.png"
             };
             return secondSeller;
         }
@@ -51,11 +51,11 @@ namespace DAL.Fake.Model
         {
             var thirdSeller = new Sellers
             {
-                SellerId = 1,
-                FirstName = "",
-                LastName = "",
-                CompanyId = 1,
-                Photo = ""
+                SellerId = 3,
+                FirstName = "Louna",
+                LastName = "Gomez",
+                CompanyId = 3,
+                Photo = @"C:\Users\haraissia\Documents\Visual Studio 2013\Projects\GEvents\trunk\Test\Images\Seller\Company\Company2_logo.jpg"
             };
             return thirdSeller;
         }

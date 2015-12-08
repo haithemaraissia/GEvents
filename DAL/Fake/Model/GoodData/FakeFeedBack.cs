@@ -26,9 +26,9 @@ namespace DAL.Fake.Model
             var firstFeedBack = new FeedBacks
             {
                 FeedBackId  = 1,
-                FeebBack ="",
-                RateId  = 1,
-                SectionId   = 1
+                FeebBack ="The room were too small",
+                RateId  =  (int)Util.RateCode.Values.Good,,
+                SectionId = (int)Util.EventRateSection.Values.Organization
             };
             return firstFeedBack;
         }
@@ -38,9 +38,9 @@ namespace DAL.Fake.Model
             var secondFeedBack = new FeedBacks
             {
                 FeedBackId = 1,
-                FeebBack = "",
-                RateId = 1,
-                SectionId = 1
+                FeebBack = "The Event was great",
+                RateId  =  (int)Util.RateCode.Values.VeryGood,
+                SectionId = (int)Util.EventRateSection.Values.Events
             };
             return secondFeedBack;
         }
@@ -50,9 +50,9 @@ namespace DAL.Fake.Model
             var thirdFeedBack = new FeedBacks
             {
                 FeedBackId = 1,
-                FeebBack = "",
-                RateId = 1,
-                SectionId = 1
+                FeebBack = "The stuff was very helpful",
+                RateId = (int)Util.RateCode.Values.Netural,
+                SectionId = (int)Util.EventRateSection.Values.Location
             };
             return thirdFeedBack;
         }

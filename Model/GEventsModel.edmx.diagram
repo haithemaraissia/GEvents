@@ -5,21 +5,22 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="43f9e8854fdb4fc0830ef9a7c39b7523" Name="Diagram1" ZoomLevel="144" >
-        <EntityTypeShape EntityType="GEventsModel.Agenda" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="GEventsModel.Booths" Width="1.5" PointX="2.75" PointY="0.75" />
         <EntityTypeShape EntityType="GEventsModel.Buyers" Width="1.5" PointX="0.75" PointY="3.75" />
         <EntityTypeShape EntityType="GEventsModel.Companies" Width="1.5" PointX="2.75" PointY="3.75" />
-        <EntityTypeShape EntityType="GEventsModel.Events" Width="1.5" PointX="4.75" PointY="0.75" />
         <EntityTypeShape EntityType="GEventsModel.EventTypes" Width="1.5" PointX="4.75" PointY="4.75" />
         <EntityTypeShape EntityType="GEventsModel.FeedBacks" Width="1.5" PointX="6.75" PointY="0.75" />
         <EntityTypeShape EntityType="GEventsModel.Invitations" Width="1.5" PointX="0.75" PointY="6.75" />
         <EntityTypeShape EntityType="GEventsModel.InvitationSchedules" Width="1.5" PointX="6.75" PointY="3.75" />
         <EntityTypeShape EntityType="GEventsModel.InvitationsRefuseds" Width="1.5" PointX="6.75" PointY="6.75" />
         <EntityTypeShape EntityType="GEventsModel.Sellers" Width="1.5" PointX="2.75" PointY="7.75" />
-        <EntityTypeShape EntityType="GEventsModel.Speakers" Width="1.5" PointX="8.75" PointY="0.75" />
         <EntityTypeShape EntityType="GEventsModel.SpeakerSchedules" Width="1.5" PointX="8.75" PointY="4.75" />
         <EntityTypeShape EntityType="GEventsModel.Users" Width="1.5" PointX="8.75" PointY="7.75" />
         <EntityTypeShape EntityType="GEventsModel.UserTypes" Width="1.5" PointX="4.75" PointY="9.75" />
+        <EntityTypeShape EntityType="GEventsModel.Events" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="GEventsModel.Agenda" Width="1.5" PointX="7.375" PointY="10.75" />
+        <EntityTypeShape EntityType="GEventsModel.Speakers" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="GEventsModel.EventRateSection" Width="1.5" PointX="9.375" PointY="10.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

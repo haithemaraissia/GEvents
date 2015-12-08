@@ -28,11 +28,14 @@ namespace DAL.Fake.Model
             var firstAgenda = new Agenda
             {
                 AgendaId = 1,
-                Description = "",
+                Description = "Beeson & Associates, Inc.",
                 AgendaDate = DateTime.Today.Date,
-                Location = "",
-                Photo = "",
-                AgendaTitle = "Market Fundamentals: 2:00-4:30pm"
+                Location = "1 Floor, Room 215",
+                Photo = @"C:\Users\haraissia\Documents\Visual Studio 2013\Projects\GEvents\trunk\Test\Images\Agenda\Market.jpg",
+                EventTypeId = (int)Util.EventTypes.Values.Debate,
+                AgendaTitle = "Market Fundamentals: 2:00-4:30pm",
+                AgendaStartTime = new TimeSpan(14, 50, 0),
+                AgendaEndTime = new TimeSpan(16, 10, 0)
             };
             return firstAgenda;
         }
@@ -44,9 +47,12 @@ namespace DAL.Fake.Model
                 AgendaId = 2,
                 Description = "The opening event for each Purchasing Seminar, this year's Sunday evening cocktail party will be hosted at Sprint Festival Plaza in Union Station.",
                 AgendaDate = DateTime.Today.Date.AddHours(2),
-                Location = "",
-                Photo = "",
-                AgendaTitle = "Cocktails at Union Station"
+                Location = "Lobby Main Entrance",
+                Photo = @"C:\Users\haraissia\Documents\Visual Studio 2013\Projects\GEvents\trunk\Test\Images\Agenda\Coktail.jpg",
+                AgendaTitle = "Cocktails at Union Station",
+                EventTypeId = (int)Util.EventTypes.Values.Presentation,
+                AgendaStartTime = new TimeSpan(14, 50, 0),
+                AgendaEndTime = new TimeSpan(16, 10, 0)
             };
             return secondAgenda;
         }
@@ -56,11 +62,14 @@ namespace DAL.Fake.Model
             var thirdAgenda = new Agenda
             {
                 AgendaId = 3,
-                Description = "Paul Meyers, Chief Agricultural Economist.",
+                Description = "Breakfast",
                 AgendaDate = DateTime.Today.Date.AddHours(1).AddDays(1),
-                Location = "",
+                Location = "Second Floor",
                 Photo = "",
-                AgendaTitle = "Wheat and World Prospects for New Crop: 9:05 - 9:50am"
+                EventTypeId = (int)Util.EventTypes.Values.Break,
+                AgendaTitle = "Wheat and World Prospects for New Crop:",
+                AgendaStartTime = new TimeSpan(9, 05, 0),
+                AgendaEndTime = new TimeSpan(9, 50, 0)
             };
             return thirdAgenda;
         }

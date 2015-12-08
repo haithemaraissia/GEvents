@@ -17,7 +17,9 @@ namespace DAL.Fake.Model
             MyEventTypes = new List<EventTypes> {
                 FirstEventType(), 
                 SecondEventType(),
-                ThirdEventType()
+                ThirdEventType(),
+                FourthEventType(),
+                FifthEventType()
             };
         }
 
@@ -27,7 +29,7 @@ namespace DAL.Fake.Model
             var firstEventType = new EventTypes
             {
                 EventTypeId = 1,
-                EventTypeValue = ""
+                EventTypeValue = Util.EventTypes.Values.BreakFast.ToString()
             };
             return firstEventType;
         }
@@ -37,7 +39,7 @@ namespace DAL.Fake.Model
             var secondEventType = new EventTypes
             {
                 EventTypeId = 2,
-                EventTypeValue = ""
+                EventTypeValue = Util.EventTypes.Values.Coktail.ToString()
             };
             return secondEventType;
         }
@@ -47,9 +49,28 @@ namespace DAL.Fake.Model
             var thirdEventType = new EventTypes
             {
                 EventTypeId = 3,
-                EventTypeValue = ""
+                EventTypeValue = Util.EventTypes.Values.Dinner.ToString()
             };
             return thirdEventType;
+        }
+        public EventTypes FourthEventType()
+        {
+            var fourthEventType = new EventTypes
+            {
+                EventTypeId = 3,
+                EventTypeValue = Util.EventTypes.Values.Lunch.ToString()
+            };
+            return fourthEventType;
+        }
+
+        public EventTypes FifthEventType()
+        {
+            var fifthEventType = new EventTypes
+            {
+                EventTypeId = 3,
+                EventTypeValue = Util.EventTypes.Values.Presentation.ToString()
+            };
+            return fifthEventType;
         }
         ~FakeEventTypes()
         {

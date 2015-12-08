@@ -20,5 +20,8 @@ namespace Model
         public string Location { get; set; }
         public string Photo { get; set; }
         public string AgendaTitle { get; set; }
+        public System.TimeSpan AgendaStartTime { get; set; }
+        public System.TimeSpan AgendaEndTime { get; set; }
+        public int EventTypeId { get; set; }
     }
 }

@@ -12,15 +12,9 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Speakers
+    public partial class EventRateSection
     {
-        public int SpeakerId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Title { get; set; }
-        public int CompanyId { get; set; }
-        public string Photo { get; set; }
-        public string Bio { get; set; }
-        public int ScheduleId { get; set; }
+        public int SectionId { get; set; }
+        public string SectionValue { get; set; }
     }
 }

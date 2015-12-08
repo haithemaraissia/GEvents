@@ -6,7 +6,9 @@ namespace DAL.Fake.Model.Util
         {
             Buyer = 1,
             Seller = 2,
-            Admin = 3
+            Admin = 3,
+            Speaker = 4,
+            Mediator = 5
         }
     }
 }

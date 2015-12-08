@@ -78,6 +78,30 @@
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Agenda\Coktail.jpg" />
+    <Content Include="Images\Agenda\Market.jpg" />
+    <Content Include="Images\Buyer\Company\Company_logo4.png" />
+    <Content Include="Images\Buyer\Company\Company_logo5.gif" />
+    <Content Include="Images\Buyer\Company\Company_logo6.png" />
+    <Content Include="Images\Events\Grains.jpg" />
+    <Content Include="Images\Events\Market.jpg" />
+    <Content Include="Images\Events\Oil.jpg" />
+    <Content Include="Images\Map\BoothMap.png" />
+    <Content Include="Images\Seller\Company\business-company-logo.jpg" />
+    <Content Include="Images\Seller\Company\Company2_logo.jpg" />
+    <Content Include="Images\Seller\Company\Company3_Logo.png" />
+    <Content Include="Images\Speaker\Jeff.jpg" />
+    <Content Include="Images\Speaker\Mike.jpg" />
+    <Content Include="Images\Speaker\Robert.jpg" />
+    <Content Include="Images\Users\Bob.jpg" />
+    <Content Include="Images\Users\James.jpg" />
+    <Content Include="Images\Users\Linda.jpg" />
+    <Content Include="Images\Users\Mike.jpg" />
+    <Content Include="Images\Users\Robert.jpg" />
+    <Content Include="Images\Users\Sammy.jpg" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

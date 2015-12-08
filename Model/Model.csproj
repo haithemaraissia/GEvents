@@ -63,6 +63,9 @@
     <Compile Include="Companies.cs">
       <DependentUpon>GEventsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="EventRateSection.cs">
+      <DependentUpon>GEventsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Events.cs">
       <DependentUpon>GEventsModel.tt</DependentUpon>
     </Compile>

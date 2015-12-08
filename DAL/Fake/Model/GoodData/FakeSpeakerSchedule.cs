@@ -36,8 +36,8 @@ namespace DAL.Fake.Model
         {
             var secondSpeakerSchedule = new SpeakerSchedules
             {
-                ScheduleId = 1,
-                EventId = 1
+                ScheduleId = 2,
+                EventId = 2
             };
             return secondSpeakerSchedule;
         }
@@ -46,8 +46,8 @@ namespace DAL.Fake.Model
         {
             var thirdSpeakerSchedule = new SpeakerSchedules
             {
-                ScheduleId = 1,
-                EventId = 1
+                ScheduleId = 3,
+                EventId = 2
             };
             return thirdSpeakerSchedule;
         }

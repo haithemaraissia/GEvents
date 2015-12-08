@@ -21,5 +21,7 @@ namespace Model
         public string Photo { get; set; }
         public string EventTitle { get; set; }
         public int EventTypeId { get; set; }
+        public System.TimeSpan EventStartTime { get; set; }
+        public System.TimeSpan EventEndTime { get; set; }
     }
 }

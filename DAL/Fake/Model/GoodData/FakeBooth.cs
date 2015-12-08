@@ -27,8 +27,8 @@ namespace DAL.Fake.Model
             var firstBooth = new Booths
             {
                 BoothId = 1,
-                BoothIdentifier = "A1",
-                Location = ""
+                BoothIdentifier = "401",
+                Location = "South Side"
             };
             return firstBooth;
         }
@@ -38,8 +38,8 @@ namespace DAL.Fake.Model
             var secondBooth = new Booths
             {
                 BoothId = 2,
-                BoothIdentifier = "9",
-                Location = ""
+                BoothIdentifier = "119",
+                Location = "North Side"
             };
             return secondBooth;
         }
@@ -49,8 +49,8 @@ namespace DAL.Fake.Model
             var thirdBooth = new Booths
             {
                 BoothId = 3,
-                BoothIdentifier = "B1",
-                Location = ""
+                BoothIdentifier = "142",
+                Location = "West Side"
             };
             return thirdBooth;
         }

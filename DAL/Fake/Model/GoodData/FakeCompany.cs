@@ -17,7 +17,10 @@ namespace DAL.Fake.Model
             MyCompanies = new List<Companies> {
                 FirstCompany(), 
                 SecondCompany(),
-                ThirdCompany()
+                ThirdCompany(),
+                FourthCompany(),
+                FifthCompany(),
+                SixthCompany()
             };
         }
 
@@ -27,7 +30,7 @@ namespace DAL.Fake.Model
             var firstCompanies = new Companies
             {
                 CompanyId = 1,
-                Name = ""
+                Name = "Lamnies Production"
             };
             return firstCompanies;
         }
@@ -37,7 +40,7 @@ namespace DAL.Fake.Model
             var secondCompanies = new Companies
             {
                 CompanyId = 2,
-                Name = ""
+                Name = "R & R"
             };
             return secondCompanies;
         }
@@ -47,9 +50,39 @@ namespace DAL.Fake.Model
             var thirdCompanies = new Companies
             {
                 CompanyId = 3,
-                Name = ""
+                Name = "First Production"
             };
             return thirdCompanies;
+        }
+
+        public Companies FourthCompany()
+        {
+            var fourthCompanies = new Companies
+            {
+                CompanyId = 4,
+                Name = "Chain Command"
+            };
+            return fourthCompanies;
+        }
+
+        public Companies FifthCompany()
+        {
+            var fifthCompanies = new Companies
+            {
+                CompanyId = 5,
+                Name = "Elite Manufacturing"
+            };
+            return fifthCompanies;
+        }
+
+        public Companies SixthCompany()
+        {
+            var sixthCompanies = new Companies
+            {
+                CompanyId = 6,
+                Name = "Export Production"
+            };
+            return sixthCompanies;
         }
         ~FakeCompanies()
         {
