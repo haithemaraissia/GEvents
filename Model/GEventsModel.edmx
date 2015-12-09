@@ -91,6 +91,16 @@
           <Property Name="BoothId" Type="int" Nullable="false" />
           <Property Name="Date" Type="smalldatetime" Nullable="false" />
         </EntityType>
+        <EntityType Name="InvitationsAccepted">
+          <Key>
+            <PropertyRef Name="InvitationId" />
+          </Key>
+          <Property Name="InvitationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BuyerId" Type="int" Nullable="false" />
+          <Property Name="SellerId" Type="int" Nullable="false" />
+          <Property Name="BoothId" Type="int" Nullable="false" />
+          <Property Name="Date" Type="smalldatetime" Nullable="false" />
+        </EntityType>
         <EntityType Name="InvitationSchedules">
           <Key>
             <PropertyRef Name="InvitationScheduleId" />
@@ -169,6 +179,7 @@
           <EntitySet Name="EventTypes" EntityType="Self.EventTypes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FeedBacks" EntityType="Self.FeedBacks" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Invitations" EntityType="Self.Invitations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InvitationsAccepted" EntityType="Self.InvitationsAccepted" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="InvitationSchedules" EntityType="Self.InvitationSchedules" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="InvitationsRefuseds" EntityType="Self.InvitationsRefuseds" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sellers" EntityType="Self.Sellers" Schema="dbo" store:Type="Tables" />
@@ -198,6 +209,7 @@
           <EntitySet Name="Agenda" EntityType="GEventsModel.Agenda" />
           <EntitySet Name="Speakers" EntityType="GEventsModel.Speakers" />
           <EntitySet Name="EventRateSection" EntityType="GEventsModel.EventRateSection" />
+          <EntitySet Name="InvitationsAccepted" EntityType="GEventsModel.InvitationsAccepted" />
         </EntityContainer>
         <EntityType Name="Booths">
           <Key>
@@ -352,6 +364,16 @@
           </Key>
           <Property Name="SectionId" Type="Int32" Nullable="false" />
           <Property Name="SectionValue" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="InvitationsAccepted">
+          <Key>
+            <PropertyRef Name="InvitationId" />
+          </Key>
+          <Property Name="InvitationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BuyerId" Type="Int32" Nullable="false" />
+          <Property Name="SellerId" Type="Int32" Nullable="false" />
+          <Property Name="BoothId" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -526,6 +548,17 @@
               <MappingFragment StoreEntitySet="EventRateSection">
                 <ScalarProperty Name="SectionValue" ColumnName="SectionValue" />
                 <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InvitationsAccepted">
+            <EntityTypeMapping TypeName="GEventsModel.InvitationsAccepted">
+              <MappingFragment StoreEntitySet="InvitationsAccepted">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="BoothId" ColumnName="BoothId" />
+                <ScalarProperty Name="SellerId" ColumnName="SellerId" />
+                <ScalarProperty Name="BuyerId" ColumnName="BuyerId" />
+                <ScalarProperty Name="InvitationId" ColumnName="InvitationId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -39,7 +39,7 @@ namespace DAL.Fake.Model
         {
             var secondInvitationSchedule = new InvitationSchedules
             {
-                InvitationScheduleId = 1,
+                InvitationScheduleId = 2,
                 BuyerId = 1,
                 SellerId = 1,
                 BoothId = 1,
@@ -52,7 +52,7 @@ namespace DAL.Fake.Model
         {
             var thirdInvitationSchedule = new InvitationSchedules
             {
-                InvitationScheduleId = 1,
+                InvitationScheduleId = 3,
                 BuyerId = 1,
                 SellerId = 1,
                 BoothId = 1,

@@ -4,27 +4,27 @@ using Model;
 
 namespace DAL.Fake
 {
-    public class FakeInvitations
+    public class FakeInvitationAccepted
     {
-        public List<Invitations> MyInvitations;
+        public List<InvitationsAccepted> MyInvitations;
 
-        public FakeInvitations()
+        public FakeInvitationAccepted()
         {
             InitializeInvitationList();
         }
 
         public void InitializeInvitationList()
         {
-            MyInvitations = new List<Invitations> {
+            MyInvitations = new List<InvitationsAccepted> {
                 FirstInvitation(), 
                 SecondInvitation(),
                 ThirdInvitation()
             };
         }
 
-        public Invitations FirstInvitation()
+        public InvitationsAccepted FirstInvitation()
         {
-            var firstInvitation = new Invitations
+            var firstInvitation = new InvitationsAccepted
             {
                 InvitationId = 1,
                 BuyerId = 1,
@@ -35,9 +35,9 @@ namespace DAL.Fake
             return firstInvitation;
         }
 
-        public Invitations SecondInvitation()
+        public InvitationsAccepted SecondInvitation()
         {
-            var secondInvitation = new Invitations
+            var secondInvitation = new InvitationsAccepted
             {
                 InvitationId = 2,
                 BuyerId = 1,
@@ -48,9 +48,9 @@ namespace DAL.Fake
             return secondInvitation;
         }
 
-        public Invitations ThirdInvitation()
+        public InvitationsAccepted ThirdInvitation()
         {
-            var thirdInvitation = new Invitations
+            var thirdInvitation = new InvitationsAccepted
             {
                 InvitationId = 3,
                 BuyerId = 1,
@@ -60,7 +60,7 @@ namespace DAL.Fake
             };
             return thirdInvitation;
         }
-        ~FakeInvitations()
+        ~FakeInvitationAccepted()
         {
             MyInvitations = null;
         }

@@ -81,7 +81,9 @@
     <Compile Include="Fake\Model\GoodData\FakeCompany.cs" />
     <Compile Include="Fake\Model\GoodData\FakeFeedBack.cs" />
     <Compile Include="Fake\Model\GoodData\FakeEventRateSection.cs" />
+    <Compile Include="Fake\Model\Invitations\Buyer\BuyerInvitations.cs" />
     <Compile Include="Fake\Model\Invitations\FakeInvitation.cs" />
+    <Compile Include="Fake\Model\Invitations\FakeInvitationAccepted.cs" />
     <Compile Include="Fake\Model\Invitations\FakeInvitationSchedule.cs" />
     <Compile Include="Fake\Model\Invitations\FakeInvitationRefused.cs" />
     <Compile Include="Fake\Model\GoodData\FakeSeller.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="Fake\Model\GoodData\FakeSpeakerSchedule.cs" />
     <Compile Include="Fake\Model\GoodData\FakeUsers.cs" />
     <Compile Include="Fake\Model\GoodData\FakeUserTypes.cs" />
+    <Compile Include="Fake\Model\Invitations\Seller\SellerInvitations.cs" />
     <Compile Include="Fake\Model\Util\DateUtil.cs" />
     <Compile Include="Fake\Model\Util\EventTypes.cs" />
     <Compile Include="Fake\Model\Util\EventRateSection.cs" />
@@ -107,6 +110,7 @@
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">

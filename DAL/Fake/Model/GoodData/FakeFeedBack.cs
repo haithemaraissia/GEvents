@@ -27,7 +27,7 @@ namespace DAL.Fake.Model
             {
                 FeedBackId  = 1,
                 FeebBack ="The room were too small",
-                RateId  =  (int)Util.RateCode.Values.Good,,
+                RateId  =  (int)Util.RateCode.Values.Good,
                 SectionId = (int)Util.EventRateSection.Values.Organization
             };
             return firstFeedBack;

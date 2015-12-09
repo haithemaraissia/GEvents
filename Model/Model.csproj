@@ -93,6 +93,9 @@
     <Compile Include="Invitations.cs">
       <DependentUpon>GEventsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="InvitationsAccepted.cs">
+      <DependentUpon>GEventsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="InvitationSchedules.cs">
       <DependentUpon>GEventsModel.tt</DependentUpon>
     </Compile>

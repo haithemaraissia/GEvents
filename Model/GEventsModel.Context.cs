@@ -41,5 +41,6 @@ namespace Model
         public virtual DbSet<Agenda> Agenda { get; set; }
         public virtual DbSet<Speakers> Speakers { get; set; }
         public virtual DbSet<EventRateSection> EventRateSection { get; set; }
+        public virtual DbSet<InvitationsAccepted> InvitationsAccepted { get; set; }
     }
 }
