@@ -8,11 +8,13 @@ namespace DAL.Fake.Repo.Repository
 {
     public class FakeEventsRepository : FakeGenericRepository<Events>, IEventRepository
     {
-        public FakeEventsRepository(): base(new FakeEvents().MyEvents)
+        public FakeEventsRepository()
+            : base(new FakeEvents().MyEvents)
         {
         }
 
-        public FakeEventsRepository(List<Events> myEvents): base(myEvents)
+        public FakeEventsRepository(List<Events> myEvents)
+            : base(myEvents)
         {
         }
 

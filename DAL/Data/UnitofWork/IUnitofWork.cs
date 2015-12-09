@@ -1,5 +1,6 @@
 using System;
 using DAL.Data.Generic;
+using DAL.Fake.Repo.Repository;
 using Model;
 
 namespace DAL.Data.UnitofWork
@@ -27,145 +28,176 @@ namespace DAL.Data.UnitofWork
 
         //Model
        
-        #region ClientRepository
+        #region AgendaRepository
 
-        private IGenericRepository<Events> _eventRepository;
-        public IGenericRepository<Events> EventRepository
+        private IGenericRepository<Agenda> _agendaRepository;
+        public IGenericRepository<Agenda> AgendaRepository
         {
-            get { return _eventRepository ?? (_eventRepository = new GenericRepository<Events>(_context)); }
-            set { _eventRepository = value; }
+            get { return _agendaRepository ?? (_agendaRepository = new GenericRepository<Agenda>(_context)); }
+            set { _agendaRepository = value; }
         }
         #endregion
 
-        //#region CookerRepository
+        #region BoothRepository
 
-        //private IGenericRepository<Cooker> _cookerRepository;
-        //public IGenericRepository<Cooker> CookerRepository
-        //{
-        //    get { return _cookerRepository ?? (_cookerRepository = new GenericRepository<Cooker>(_context)); }
-        //    set { _cookerRepository = value; }
-        //}
-        //#endregion
+        private IGenericRepository<Booths> _boothRepository;
+        public IGenericRepository<Booths> BoothRepository
+        {
+            get { return _boothRepository ?? (_boothRepository = new GenericRepository<Booths>(_context)); }
+            set { _boothRepository = value; }
+        }
+        #endregion
 
-        //#region CookerMenusRepository
-        
-        //private IGenericRepository<CookerMenu> _cookerMenuRepository;
-        //public IGenericRepository<CookerMenu> CookerMenuRepository
-        //{
-        //    get { return _cookerMenuRepository ?? (_cookerMenuRepository = new GenericRepository<CookerMenu>(_context)); }
-        //    set { _cookerMenuRepository = value; }
-        //}
-        //#endregion
+        #region BuyerRepository
 
-        //#region CookerMenuPriceRepository
+        private IGenericRepository<Buyers> _buyerRepository;
+        public IGenericRepository<Buyers> BuyerRepository
+        {
+            get { return _buyerRepository ?? (_buyerRepository = new GenericRepository<Buyers>(_context)); }
+            set { _buyerRepository = value; }
+        }
+        #endregion
 
-        //private IGenericRepository<CookerMenuPrice> _cookerMenuPriceRepository;
-        //public IGenericRepository<CookerMenuPrice> CookerMenuPriceRepository
-        //{
-        //    get { return _cookerMenuPriceRepository ?? (_cookerMenuPriceRepository = new GenericRepository<CookerMenuPrice>(_context)); }
-        //    set { _cookerMenuPriceRepository = value; }
-        //}
-        //#endregion
+        #region CompanyRepository
 
-        //#region CuisineTypesRepository
+        private IGenericRepository<Companies> _companyRepository;
+        public IGenericRepository<Companies> CompanyRepository
+        {
+            get { return _companyRepository ?? (_companyRepository = new GenericRepository<Companies>(_context)); }
+            set { _companyRepository = value; }
+        }
+        #endregion
 
-        //private IGenericRepository<Cooker> _cuisineTypeRepository;
-        //public IGenericRepository<Cooker> CuisineTypeRepository
-        //{
-        //    get { return _cuisineTypeRepository ?? (_cuisineTypeRepository = new GenericRepository<Cooker>(_context)); }
-        //    set { _cuisineTypeRepository = value; }
-        //}
-        //#endregion
+        #region EventRateSectionRepository
 
-        //#region CurrenciesRepository
+        private IGenericRepository<EventRateSection> _eventRateSectionRepository;
+        public IGenericRepository<EventRateSection> EventRateSectionRepository
+        {
+            get { return _eventRateSectionRepository ?? (_eventRateSectionRepository = new GenericRepository<EventRateSection>(_context)); }
+            set { _eventRateSectionRepository = value; }
+        }
 
-        //private IGenericRepository<Currency> _currenciesRepository;
-        //public IGenericRepository<Currency> CurrenciesRepository
-        //{
-        //    get { return _currenciesRepository ?? (_currenciesRepository = new GenericRepository<Currency>(_context)); }
-        //    set { _currenciesRepository = value; }
-        //}
-        //#endregion
+        #endregion
 
-        //#region DishesTypesRepository
+        #region EventsRepository
 
-        //private IGenericRepository<Dish> _dishesRepository;
-        //public IGenericRepository<Dish> DishesRepository
-        //{
-        //    get { return _dishesRepository ?? (_dishesRepository = new GenericRepository<Dish>(_context)); }
-        //    set { _dishesRepository = value; }
-        //}
-        //#endregion
+        private IGenericRepository<Events> _eventsRepository;
+        public IGenericRepository<Events> EventRepository
+        {
+            get { return _eventsRepository ?? (_eventsRepository = new GenericRepository<Events>(_context)); }
+            set { _eventsRepository = value; }
+        }
+        #endregion
 
-        //#region InvoicesRepository
+        #region EventTypesRepository
 
-        //private IGenericRepository<Invoice> _invoicesRepository;
-        //public IGenericRepository<Invoice> InvoicesRepository
-        //{
-        //    get { return _invoicesRepository ?? (_invoicesRepository = new GenericRepository<Invoice>(_context)); }
-        //    set { _invoicesRepository = value; }
-        //}
-        //#endregion
+        private IGenericRepository<EventTypes> _eventTypesRepository;
+        public IGenericRepository<EventTypes> EventTypeRepository
+        {
+            get { return _eventTypesRepository ?? (_eventTypesRepository = new GenericRepository<EventTypes>(_context)); }
+            set { _eventTypesRepository = value; }
+        }
+        #endregion
 
-        //#region MenuServingRepository
+        #region FeedBacksRepository
 
-        //private IGenericRepository<MenuServing> _menuServingRepository;
-        //public IGenericRepository<MenuServing> MenuServingRepository
-        //{
-        //    get { return _menuServingRepository ?? (_menuServingRepository = new GenericRepository<MenuServing>(_context)); }
-        //    set { _menuServingRepository = value; }
-        //}
-        //#endregion
+        private IGenericRepository<FeedBacks> _feedbacksRepository;
+        public IGenericRepository<FeedBacks> FeedBackRepository
+        {
+            get { return _feedbacksRepository ?? (_feedbacksRepository = new GenericRepository<FeedBacks>(_context)); }
+            set { _feedbacksRepository = value; }
+        }
+        #endregion
 
-        //#region OrdersRepository
+        #region SellersRepository
 
-        //private IGenericRepository<Order> _orderRepository;
-        //public IGenericRepository<Order> OrderRepository
-        //{
-        //    get { return _orderRepository ?? (_orderRepository = new GenericRepository<Order>(_context)); }
-        //    set { _orderRepository = value; }
-        //}
-        //#endregion
+        private IGenericRepository<Sellers> _sellersRepository;
+        public IGenericRepository<Sellers> SellerRepository
+        {
+            get { return _sellersRepository ?? (_sellersRepository = new GenericRepository<Sellers>(_context)); }
+            set { _sellersRepository = value; }
+        }
+        #endregion
 
-        //#region ReviewsRepository
+        #region SpeakersRepository
 
-        //private IGenericRepository<Review> _reviewsRepository;
-        //public IGenericRepository<Review> ReviewRepository
-        //{
-        //    get { return _reviewsRepository ?? (_reviewsRepository = new GenericRepository<Review>(_context)); }
-        //    set { _reviewsRepository = value; }
-        //}
-        //#endregion
+        private IGenericRepository<Speakers> _speakersRepository;
+        public IGenericRepository<Speakers> SpeakerRepository
+        {
+            get { return _speakersRepository ?? (_speakersRepository = new GenericRepository<Speakers>(_context)); }
+            set { _speakersRepository = value; }
+        }
+        #endregion
 
-        //#region ServingPricingsRepository
+        #region SpeakerSchedulesRepository
 
-        //private IGenericRepository<ServingPricing> _servingPricingRepository;
-        //public IGenericRepository<ServingPricing> ServingPricingRepository
-        //{
-        //    get { return _servingPricingRepository ?? (_servingPricingRepository = new GenericRepository<ServingPricing>(_context)); }
-        //    set { _servingPricingRepository = value; }
-        //}
-        //#endregion
+        private IGenericRepository<SpeakerSchedules> _speakerSchedulesRepository;
+        public IGenericRepository<SpeakerSchedules> SpeakerScheduleRepository
+        {
+            get { return _speakerSchedulesRepository ?? (_speakerSchedulesRepository = new GenericRepository<SpeakerSchedules>(_context)); }
+            set { _speakerSchedulesRepository = value; }
+        }
+        #endregion
 
-        //#region UsersRepository
+        #region UsersRepository
 
-        //private IGenericRepository<User> _usersRepository;
-        //public IGenericRepository<User> UserRepository
-        //{
-        //    get { return _usersRepository ?? (_usersRepository = new GenericRepository<User>(_context)); }
-        //    set { _usersRepository = value; }
-        //}
-        //#endregion
+        private IGenericRepository<Users> _usersRepository;
+        public IGenericRepository<Users> UserRepository
+        {
+            get { return _usersRepository ?? (_usersRepository = new GenericRepository<Users>(_context)); }
+            set { _usersRepository = value; }
+        }
+        #endregion
 
-        //#region UserTypesRepository
+        #region UserTypesRepository
 
-        //private IGenericRepository<UserType> _userTypeRepository;
-        //public IGenericRepository<UserType> UserTypeRepository
-        //{
-        //    get { return _userTypeRepository ?? (_userTypeRepository = new GenericRepository<UserType>(_context)); }
-        //    set { _userTypeRepository = value; }
-        //}
-        //#endregion
+        private IGenericRepository<UserTypes> _userTypesRepository;
+        public IGenericRepository<UserTypes> UserTypeRepository
+        {
+            get { return _userTypesRepository ?? (_userTypesRepository = new GenericRepository<UserTypes>(_context)); }
+            set { _userTypesRepository = value; }
+        }
+        #endregion
+
+        #region InvitationsRepository
+
+        private IGenericRepository<Invitations> _invitationsRepository;
+        public IGenericRepository<Invitations> InvitationsRepository
+        {
+            get { return _invitationsRepository ?? (_invitationsRepository = new GenericRepository<Invitations>(_context)); }
+            set { _invitationsRepository = value; }
+        }
+        #endregion
+
+        #region InvitationAcceptedRepository
+
+        private IGenericRepository<InvitationsAccepted> _invitationAcceptedRepository;
+        public IGenericRepository<InvitationsAccepted> InvitationAcceptedRepository
+        {
+            get { return _invitationAcceptedRepository ?? (_invitationAcceptedRepository = new GenericRepository<InvitationsAccepted>(_context)); }
+            set { _invitationAcceptedRepository = value; }
+        }
+        #endregion
+
+        #region InvitationRefusedRepository
+
+        private IGenericRepository<InvitationsRefuseds> _invitationRefusedRepository;
+        public IGenericRepository<InvitationsRefuseds> InvitationRefusedRepository
+        {
+            get { return _invitationRefusedRepository ?? (_invitationRefusedRepository = new GenericRepository<InvitationsRefuseds>(_context)); }
+            set { _invitationRefusedRepository = value; }
+        }
+        #endregion
+
+        #region InvitationScheduleRepository
+
+        private IGenericRepository<InvitationSchedules> _invitationScheduleRepositoryRepository;
+        public IGenericRepository<InvitationSchedules> InvitationScheduleRepository
+        {
+            get { return _invitationScheduleRepositoryRepository ?? (_invitationScheduleRepositoryRepository = new GenericRepository<InvitationSchedules>(_context)); }
+            set { _invitationScheduleRepositoryRepository = value; }
+        }
+        #endregion
 
       #endregion
 

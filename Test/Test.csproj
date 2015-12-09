@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\Uow.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Core\Invitations\Scenario\InvitationScenario.cs" />
     <Compile Include="Events.cs" />

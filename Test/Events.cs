@@ -13,8 +13,8 @@ namespace Test
         public void Initialize()
         {
             // Arrange
-            var eventsRepo = new FakeEventsRepository();
-            var uow = new UnitofWork { EventRepository = eventsRepo };
+            var eventsRepo = new FakeUserRepository();
+            var uow = new UnitofWork { UserRepository = eventsRepo };
            // Controller = new OwnersController(uow);
         }
 
