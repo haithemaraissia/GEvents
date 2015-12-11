@@ -66,6 +66,9 @@
     <Compile Include="Base\Uow.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Core\Invitations\Scenario\InvitationScenario.cs" />
+    <Compile Include="Helper\BuyerHelper.cs" />
+    <Compile Include="Helper\InvitationHelper.cs" />
+    <Compile Include="Helper\SellerHelper.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -7,7 +7,8 @@ namespace DAL.Fake.Model.Util
             Pending = 1,
             Accepted = 2,
             Refused = 3,
-            Scheduled= 4
+            Scheduled= 4,
+            Cleared=7
         }
     }
 }
