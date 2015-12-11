@@ -27,9 +27,9 @@ namespace DAL.Fake
             var firstInvitation = new InvitationsAccepted
             {
                 InvitationId = 1,
-                BuyerId = 1,
-                SellerId = 1,
-                BoothId = 1,
+                BuyerId = 3,
+                SellerId = 3,
+                BoothId = 3,
                 Date = DateTime.Today.Date
             };
             return firstInvitation;
@@ -40,9 +40,9 @@ namespace DAL.Fake
             var secondInvitation = new InvitationsAccepted
             {
                 InvitationId = 2,
-                BuyerId = 1,
-                SellerId = 2,
-                BoothId = 1,
+                BuyerId = 4,
+                SellerId = 3,
+                BoothId = 2,
                 Date = DateTime.Today.Date
             };
             return secondInvitation;
@@ -53,13 +53,14 @@ namespace DAL.Fake
             var thirdInvitation = new InvitationsAccepted
             {
                 InvitationId = 3,
-                BuyerId = 1,
+                BuyerId = 3,
                 SellerId = 3,
-                BoothId = 1,
+                BoothId = 2,
                 Date = DateTime.Today.Date
             };
             return thirdInvitation;
         }
+
         ~FakeInvitationAccepted()
         {
             MyInvitations = null;

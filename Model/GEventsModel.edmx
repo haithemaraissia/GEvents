@@ -90,16 +90,18 @@
           <Property Name="SellerId" Type="int" Nullable="false" />
           <Property Name="BoothId" Type="int" Nullable="false" />
           <Property Name="Date" Type="smalldatetime" Nullable="false" />
+          <Property Name="StatusId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="InvitationsAccepted">
           <Key>
-            <PropertyRef Name="InvitationId" />
+            <PropertyRef Name="InvitationsAcceptedId" />
           </Key>
-          <Property Name="InvitationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InvitationsAcceptedId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="BuyerId" Type="int" Nullable="false" />
           <Property Name="SellerId" Type="int" Nullable="false" />
           <Property Name="BoothId" Type="int" Nullable="false" />
           <Property Name="Date" Type="smalldatetime" Nullable="false" />
+          <Property Name="InvitationId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="InvitationSchedules">
           <Key>
@@ -110,16 +112,18 @@
           <Property Name="SellerId" Type="int" Nullable="false" />
           <Property Name="BoothId" Type="int" Nullable="false" />
           <Property Name="Date" Type="smalldatetime" Nullable="false" />
+          <Property Name="InvitationId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="InvitationsRefuseds">
           <Key>
-            <PropertyRef Name="InvitationId" />
+            <PropertyRef Name="InvitationRefusedId" />
           </Key>
-          <Property Name="InvitationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InvitationRefusedId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="BuyerId" Type="int" Nullable="false" />
           <Property Name="SellerId" Type="int" Nullable="false" />
           <Property Name="BoothId" Type="int" Nullable="false" />
           <Property Name="Date" Type="smalldatetime" Nullable="false" />
+          <Property Name="InvitationId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Sellers">
           <Key>
@@ -200,7 +204,6 @@
           <EntitySet Name="FeedBacks" EntityType="GEventsModel.FeedBacks" />
           <EntitySet Name="Invitations" EntityType="GEventsModel.Invitations" />
           <EntitySet Name="InvitationSchedules" EntityType="GEventsModel.InvitationSchedules" />
-          <EntitySet Name="InvitationsRefuseds" EntityType="GEventsModel.InvitationsRefuseds" />
           <EntitySet Name="Sellers" EntityType="GEventsModel.Sellers" />
           <EntitySet Name="SpeakerSchedules" EntityType="GEventsModel.SpeakerSchedules" />
           <EntitySet Name="Users" EntityType="GEventsModel.Users" />
@@ -209,6 +212,7 @@
           <EntitySet Name="Agenda" EntityType="GEventsModel.Agenda" />
           <EntitySet Name="Speakers" EntityType="GEventsModel.Speakers" />
           <EntitySet Name="EventRateSection" EntityType="GEventsModel.EventRateSection" />
+          <EntitySet Name="InvitationsRefuseds" EntityType="GEventsModel.InvitationsRefuseds" />
           <EntitySet Name="InvitationsAccepted" EntityType="GEventsModel.InvitationsAccepted" />
         </EntityContainer>
         <EntityType Name="Booths">
@@ -261,6 +265,7 @@
           <Property Name="SellerId" Type="Int32" Nullable="false" />
           <Property Name="BoothId" Type="Int32" Nullable="false" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="StatusId" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="InvitationSchedules">
           <Key>
@@ -271,16 +276,7 @@
           <Property Name="SellerId" Type="Int32" Nullable="false" />
           <Property Name="BoothId" Type="Int32" Nullable="false" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
-        </EntityType>
-        <EntityType Name="InvitationsRefuseds">
-          <Key>
-            <PropertyRef Name="InvitationId" />
-          </Key>
-          <Property Name="InvitationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="BuyerId" Type="Int32" Nullable="false" />
-          <Property Name="SellerId" Type="Int32" Nullable="false" />
-          <Property Name="BoothId" Type="Int32" Nullable="false" />
-          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="InvitationId" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Sellers">
           <Key>
@@ -365,15 +361,27 @@
           <Property Name="SectionId" Type="Int32" Nullable="false" />
           <Property Name="SectionValue" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="InvitationsAccepted">
+        <EntityType Name="InvitationsRefuseds">
           <Key>
-            <PropertyRef Name="InvitationId" />
+            <PropertyRef Name="InvitationRefusedId" />
           </Key>
-          <Property Name="InvitationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InvitationRefusedId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="BuyerId" Type="Int32" Nullable="false" />
           <Property Name="SellerId" Type="Int32" Nullable="false" />
           <Property Name="BoothId" Type="Int32" Nullable="false" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="InvitationId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InvitationsAccepted">
+          <Key>
+            <PropertyRef Name="InvitationsAcceptedId" />
+          </Key>
+          <Property Name="InvitationsAcceptedId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BuyerId" Type="Int32" Nullable="false" />
+          <Property Name="SellerId" Type="Int32" Nullable="false" />
+          <Property Name="BoothId" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="InvitationId" Type="Int32" Nullable="false" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -430,6 +438,7 @@
           <EntitySetMapping Name="Invitations">
             <EntityTypeMapping TypeName="GEventsModel.Invitations">
               <MappingFragment StoreEntitySet="Invitations">
+                <ScalarProperty Name="StatusId" ColumnName="StatusId" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="BoothId" ColumnName="BoothId" />
                 <ScalarProperty Name="SellerId" ColumnName="SellerId" />
@@ -441,22 +450,12 @@
           <EntitySetMapping Name="InvitationSchedules">
             <EntityTypeMapping TypeName="GEventsModel.InvitationSchedules">
               <MappingFragment StoreEntitySet="InvitationSchedules">
+                <ScalarProperty Name="InvitationId" ColumnName="InvitationId" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="BoothId" ColumnName="BoothId" />
                 <ScalarProperty Name="SellerId" ColumnName="SellerId" />
                 <ScalarProperty Name="BuyerId" ColumnName="BuyerId" />
                 <ScalarProperty Name="InvitationScheduleId" ColumnName="InvitationScheduleId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="InvitationsRefuseds">
-            <EntityTypeMapping TypeName="GEventsModel.InvitationsRefuseds">
-              <MappingFragment StoreEntitySet="InvitationsRefuseds">
-                <ScalarProperty Name="Date" ColumnName="Date" />
-                <ScalarProperty Name="BoothId" ColumnName="BoothId" />
-                <ScalarProperty Name="SellerId" ColumnName="SellerId" />
-                <ScalarProperty Name="BuyerId" ColumnName="BuyerId" />
-                <ScalarProperty Name="InvitationId" ColumnName="InvitationId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -551,14 +550,27 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="InvitationsAccepted">
-            <EntityTypeMapping TypeName="GEventsModel.InvitationsAccepted">
-              <MappingFragment StoreEntitySet="InvitationsAccepted">
+          <EntitySetMapping Name="InvitationsRefuseds">
+            <EntityTypeMapping TypeName="GEventsModel.InvitationsRefuseds">
+              <MappingFragment StoreEntitySet="InvitationsRefuseds">
+                <ScalarProperty Name="InvitationId" ColumnName="InvitationId" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="BoothId" ColumnName="BoothId" />
                 <ScalarProperty Name="SellerId" ColumnName="SellerId" />
                 <ScalarProperty Name="BuyerId" ColumnName="BuyerId" />
+                <ScalarProperty Name="InvitationRefusedId" ColumnName="InvitationRefusedId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InvitationsAccepted">
+            <EntityTypeMapping TypeName="GEventsModel.InvitationsAccepted">
+              <MappingFragment StoreEntitySet="InvitationsAccepted">
                 <ScalarProperty Name="InvitationId" ColumnName="InvitationId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="BoothId" ColumnName="BoothId" />
+                <ScalarProperty Name="SellerId" ColumnName="SellerId" />
+                <ScalarProperty Name="BuyerId" ColumnName="BuyerId" />
+                <ScalarProperty Name="InvitationsAcceptedId" ColumnName="InvitationsAcceptedId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

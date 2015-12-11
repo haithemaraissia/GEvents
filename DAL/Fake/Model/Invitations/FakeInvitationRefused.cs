@@ -26,9 +26,9 @@ namespace DAL.Fake.Model
         {
             var firstInvitationsRefused = new InvitationsRefuseds
             {
-                InvitationId = 1,
-                BuyerId = 1,
-                SellerId = 1,
+                InvitationId = 2,
+                BuyerId = 2,
+                SellerId = 2,
                 BoothId = 1,
                 Date = DateTime.Today.Date
             };
@@ -39,10 +39,10 @@ namespace DAL.Fake.Model
         {
             var secondInvitationsRefused = new InvitationsRefuseds
             {
-                InvitationId = 2,
-                BuyerId = 1,
-                SellerId = 1,
-                BoothId = 1,
+                InvitationId = 3,
+                BuyerId = 4,
+                SellerId = 2,
+                BoothId = 3,
                 Date = DateTime.Today.Date
             };
             return secondInvitationsRefused;
@@ -52,10 +52,10 @@ namespace DAL.Fake.Model
         {
             var thirdInvitationsRefused = new InvitationsRefuseds
             {
-                InvitationId = 3,
-                BuyerId = 1,
-                SellerId = 1,
-                BoothId = 1,
+                InvitationId = 4,
+                BuyerId = 2,
+                SellerId = 2,
+                BoothId = 2,
                 Date = DateTime.Today.Date
             };
             return thirdInvitationsRefused;

@@ -28,7 +28,7 @@ namespace DAL.Fake.Model
         {
             string dateString = "Tue 16 Jun 8:30 AM 2008"; // <-- Never existed!
             string format = "ddd dd MMM h:mm tt yyyy";
-            DateTime dateTime = DateTime.ParseExact(dateString,format, CultureInfo.InvariantCulture);
+        //  DateTime dateTime = DateTime.ParseExact(dateString,format, CultureInfo.InvariantCulture);
 
             var firstEvent = new Events
             {

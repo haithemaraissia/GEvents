@@ -27,8 +27,8 @@ namespace DAL.Fake.Model
             var firstInvitationSchedule = new InvitationSchedules
             {
                 InvitationScheduleId = 1,
-                BuyerId = 1,
-                SellerId = 1,
+                BuyerId = 2,
+                SellerId = 2,
                 BoothId = 1,
                 Date = DateTime.Now.Date
             };
@@ -40,8 +40,8 @@ namespace DAL.Fake.Model
             var secondInvitationSchedule = new InvitationSchedules
             {
                 InvitationScheduleId = 2,
-                BuyerId = 1,
-                SellerId = 1,
+                BuyerId = 2,
+                SellerId = 2,
                 BoothId = 1,
                 Date = DateTime.Now.Date
             };
@@ -53,8 +53,8 @@ namespace DAL.Fake.Model
             var thirdInvitationSchedule = new InvitationSchedules
             {
                 InvitationScheduleId = 3,
-                BuyerId = 1,
-                SellerId = 1,
+                BuyerId = 2,
+                SellerId = 2,
                 BoothId = 1,
                 Date = DateTime.Now.Date
             };
