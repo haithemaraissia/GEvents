@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL.Data.UnitofWork;
 using DAL.Fake.Model.Util;
+using Model;
 using Test.Base;
 
 namespace Test.Helper
@@ -17,15 +18,19 @@ namespace Test.Helper
         //Clear Refused Invitation
 
         private readonly UnitofWork _uow;
+        public  Buyers Buyer;
+
 
         public BuyerHelper()
         {
             _uow = new Uow().AllRepo();
+            Buyer = new Buyers();
         }
 
-        public BuyerHelper(UnitofWork uow)
+        public BuyerHelper(UnitofWork uow, Buyers b)
         {
             _uow = uow;
+            Buyer = b;
         }
 
         public void AcceptInvitation(int invitationId)
@@ -50,24 +55,24 @@ namespace Test.Helper
 
         #region Common
 
-        private int GetInvitationCount(int buyerId)
+        public int GetInvitationCount()
         {
-            return _uow.InvitationsRepository.Count(x => x.BuyerId == buyerId);
+            return _uow.InvitationsRepository.Count(x => x.BuyerId == Buyer.BuyerId);
         }
 
-        private int GetAcceptedInvitationCount(int buyerId)
+        public int GetAcceptedInvitationCount()
         {
-            return _uow.InvitationAcceptedRepository.Count(x => x.BuyerId == buyerId);
+            return _uow.InvitationAcceptedRepository.Count(x => x.BuyerId == Buyer.BuyerId);
         }
 
-        private int GetRefusedInvitationCount(int buyerId)
+        public int GetRefusedInvitationCount()
         {
-            return _uow.InvitationRefusedRepository.Count(x => x.BuyerId == buyerId);
+            return _uow.InvitationRefusedRepository.Count(x => x.BuyerId == Buyer.BuyerId);
         }
 
-        private int GetScheduledInvitationCount(int buyerId)
+        public int GetScheduledInvitationCount()
         {
-            return _uow.InvitationScheduleRepository.Count(x => x.BuyerId == buyerId);
+            return _uow.InvitationScheduleRepository.Count(x => x.BuyerId == Buyer.BuyerId);
         }
         #endregion
     }

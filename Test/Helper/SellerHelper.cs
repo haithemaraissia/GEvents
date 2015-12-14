@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL.Data.UnitofWork;
 using DAL.Fake.Model.Util;
+using Model;
 using Test.Base;
 
 namespace Test.Helper
@@ -15,30 +16,34 @@ namespace Test.Helper
         //Create Invitation
 
         private readonly UnitofWork _uow;
+        private readonly Sellers _seller;
 
         public SellerHelper()
         {
             _uow = new Uow().AllRepo();
+            _seller = new Sellers();
         }
 
-        public SellerHelper(UnitofWork uow)
+        public SellerHelper(UnitofWork uow,  Sellers s)
         {
             _uow = uow;
+            _seller = s;
         }
 
-        public void CreateInvitation(int buyerId, int sellerId, int boothId, DateTime date)
+        public int CreateInvitation(int buyerId, int boothId, DateTime date)
         {
-            if (DoesInvitationExist(sellerId, buyerId)) return;
+            if (DoesInvitationExist(_seller.SellerId, buyerId)) return 0;
             var newInvitation = new Model.Invitations
             {
                 BuyerId = buyerId,
-                SellerId = sellerId,
+                SellerId = _seller.SellerId,
                 BoothId = boothId,
                 Date = date,
                 StatusId = (int) InvitationStatus.Values.Pending
             };
             _uow.InvitationsRepository.Add(newInvitation);
             _uow.Save();
+            return (newInvitation.InvitationId);
         }
 
         private bool DoesInvitationExist(int sellerId, int buyerId)
@@ -50,24 +55,24 @@ namespace Test.Helper
 
         #region Common
 
-        private int GetInvitationCount(int sellerId)
+        public int GetInvitationCount()
         {
-            return _uow.InvitationsRepository.Count(x => x.SellerId == sellerId);
+            return _uow.InvitationsRepository.Count(x => x.SellerId == _seller.SellerId);
         }
 
-        private int GetAcceptedInvitationCount(int sellerId)
+        public int GetAcceptedInvitationCount()
         {
-            return _uow.InvitationAcceptedRepository.Count(x => x.SellerId == sellerId);
+            return _uow.InvitationAcceptedRepository.Count(x => x.SellerId == _seller.SellerId);
         }
 
-        private int GetRefusedInvitationCount(int sellerId)
+        public int GetRefusedInvitationCount()
         {
-            return _uow.InvitationRefusedRepository.Count(x => x.SellerId == sellerId);
+            return _uow.InvitationRefusedRepository.Count(x => x.SellerId == _seller.SellerId);
         }
 
-        private int GetScheduledInvitationCount(int sellerId)
+        public int GetScheduledInvitationCount()
         {
-            return _uow.InvitationScheduleRepository.Count(x => x.SellerId == sellerId);
+            return _uow.InvitationScheduleRepository.Count(x => x.SellerId == _seller.SellerId);
         }
         #endregion
 
