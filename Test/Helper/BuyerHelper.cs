@@ -55,25 +55,42 @@ namespace Test.Helper
 
         #region Common
 
+        public List<Invitations> GetInvitations()
+        {
+            return _uow.InvitationsRepository.FindBy(x => x.BuyerId == Buyer.BuyerId).ToList();
+        }
         public int GetInvitationCount()
         {
             return _uow.InvitationsRepository.Count(x => x.BuyerId == Buyer.BuyerId);
         }
 
+        public List<InvitationsAccepted> GetAcceptedInvitations()
+        {
+            return _uow.InvitationAcceptedRepository.FindBy(x => x.BuyerId == Buyer.BuyerId).ToList();
+        }
         public int GetAcceptedInvitationCount()
         {
             return _uow.InvitationAcceptedRepository.Count(x => x.BuyerId == Buyer.BuyerId);
         }
 
+        public List<InvitationsRefuseds> GetRefusedInvitations()
+        {
+            return _uow.InvitationRefusedRepository.FindBy(x => x.BuyerId == Buyer.BuyerId).ToList();
+        }
         public int GetRefusedInvitationCount()
         {
             return _uow.InvitationRefusedRepository.Count(x => x.BuyerId == Buyer.BuyerId);
         }
 
+        public List<InvitationSchedules> GetScheduledInvitations()
+        {
+            return _uow.InvitationScheduleRepository.FindBy(x => x.BuyerId == Buyer.BuyerId).ToList();
+        }
         public int GetScheduledInvitationCount()
         {
             return _uow.InvitationScheduleRepository.Count(x => x.BuyerId == Buyer.BuyerId);
         }
+
         #endregion
     }
 }
