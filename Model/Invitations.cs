@@ -20,6 +20,7 @@ namespace Model
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int InvitationId { get; set; }
+
         public int BuyerId { get; set; }
         public int SellerId { get; set; }
         public int BoothId { get; set; }

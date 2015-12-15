@@ -13,6 +13,13 @@ using Test.Helper;
 
 namespace Test.Core.UserStories
 {
+    /// <summary>
+    /// This test is a primary test
+    /// It handles all cases for Seller/Buyer
+    /// Accept, reject, accept after reject and schedule invitations
+    /// 
+    /// Basically, it summarizes all cases around invitations interactions
+    /// </summary>
     [TestClass]
     public class InvitationUserStory
     {
@@ -107,14 +114,14 @@ namespace Test.Core.UserStories
 
             #region InitCountVerification
             #region Mike
-            Assert.AreEqual(1, MikeInvitationCount);
+            Assert.AreEqual(0, MikeInvitationCount);
             Assert.AreEqual(0, MikeInvitationAcceptedCount);
             Assert.AreEqual(0, MikeInvitationRefusedCount);
             Assert.AreEqual(0, MikeInvitationScheduledCount);
             #endregion
 
             #region Sara
-            Assert.AreEqual(1, SaraInvitationCount);
+            Assert.AreEqual(0, SaraInvitationCount);
             Assert.AreEqual(0, SaraInvitationAcceptedCount);
             Assert.AreEqual(2, SaraInvitationRefusedCount);
             Assert.AreEqual(3, SaraInvitationScheduledCount);
@@ -139,41 +146,47 @@ namespace Test.Core.UserStories
             //Accept
             var jeffInvitation = _jeffSeller.CreateInvitation(_mikeBuyer.Buyer.BuyerId, 5, DateTime.Today.AddHours(3));
             _mikeBuyer.AcceptInvitation(jeffInvitation);
-            Assert.AreEqual(4, JeffInvitationCount);
-            Assert.AreEqual(1, JeffInvitationScheduledCount);
-            Assert.AreEqual(1, MikeInvitationAcceptedCount);
+            Assert.AreEqual(4, _jeffSeller.GetInvitationCount());
+            Assert.AreEqual(1, _jeffSeller.GetScheduledInvitationCount());
+            Assert.AreEqual(1, _mikeBuyer.GetAcceptedInvitationCount());
             #endregion
 
             #region RefuseInvitation
             //Refuse
             var candiInvitation = _candiSeller.CreateInvitation(_mikeBuyer.Buyer.BuyerId, 5, DateTime.Today.AddHours(10));
             _mikeBuyer.RefuseInvitation(candiInvitation);
-            Assert.AreEqual(1, candiInvitation);
-            Assert.AreEqual(1, MikeInvitationRefusedCount);
+            Assert.AreEqual(1, _candiSeller.GetInvitationCount());
+            Assert.AreEqual(4, _candiSeller.GetRefusedInvitationCount());
+            Assert.AreEqual(1, _mikeBuyer.GetRefusedInvitationCount());
+
             #endregion
 
             #region ClearRefusedInvitation
             //Clear Refused
             _mikeBuyer.ClearRefusedInvitation(candiInvitation);
-            Assert.AreEqual(0, MikeInvitationRefusedCount);
-            Assert.AreEqual(0, MikeInvitationCount);
+            Assert.AreEqual(0, _mikeBuyer.GetRefusedInvitationCount());
+            Assert.AreEqual(1, _mikeBuyer.GetInvitationCount());
+            Assert.AreEqual(3, _candiSeller.GetRefusedInvitationCount());
+            Assert.AreEqual(0, _candiSeller.GetInvitationCount());
+
             #endregion
 
             #region AcceptInvitationAfterClearRefused
             //Accepted after Clear Refused
             var candiSecondInvitation = _candiSeller.CreateInvitation(_mikeBuyer.Buyer.BuyerId, 10, DateTime.Today.AddHours(14));
             _mikeBuyer.AcceptInvitation(candiSecondInvitation);
-            Assert.AreEqual(4, CandiInvitationScheduledCount);
-            Assert.AreEqual(2, MikeInvitationAcceptedCount);
+            Assert.AreEqual(4, _candiSeller.GetScheduledInvitationCount());
+            Assert.AreEqual(2, _mikeBuyer.GetAcceptedInvitationCount());
+            Assert.AreEqual(2, _mikeBuyer.GetInvitationCount());
             #endregion
 
             #region AnotherSellerInvitation
             //Another Seller
             var jeffSecondInvitation = _jeffSeller.CreateInvitation(_saraBuyer.Buyer.BuyerId, 15, DateTime.Today.AddHours(3));
             _saraBuyer.AcceptInvitation(jeffSecondInvitation);
-            Assert.AreEqual(5, JeffInvitationCount);
-            Assert.AreEqual(2, JeffInvitationScheduledCount);
-            Assert.AreEqual(1, SaraInvitationAcceptedCount);
+            Assert.AreEqual(5, _jeffSeller.GetInvitationCount());
+            Assert.AreEqual(2, _jeffSeller.GetScheduledInvitationCount());
+            Assert.AreEqual(1, _saraBuyer.GetAcceptedInvitationCount());
             #endregion
         }
     }

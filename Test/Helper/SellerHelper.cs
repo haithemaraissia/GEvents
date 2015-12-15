@@ -32,9 +32,15 @@ namespace Test.Helper
 
         public int CreateInvitation(int buyerId, int boothId, DateTime date)
         {
-            if (DoesInvitationExist(Seller.SellerId, buyerId)) return 0;
+            if (DoesInvitationExist(Seller.SellerId, buyerId))
+            {
+                
+            }
             var newInvitation = new Model.Invitations
             {
+                #if (DEBUG )
+                InvitationId =  _uow.InvitationsRepository.All.Max(x=>x.InvitationId)+ 1 ,
+                #endif
                 BuyerId = buyerId,
                 SellerId = Seller.SellerId,
                 BoothId = boothId,
@@ -42,6 +48,7 @@ namespace Test.Helper
                 StatusId = (int) InvitationStatus.Values.Pending
             };
             _uow.InvitationsRepository.Add(newInvitation);
+            //ONLY FOR 
             _uow.Save();
             return (newInvitation.InvitationId);
         }

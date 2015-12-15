@@ -39,8 +39,8 @@ namespace Test.Helper
                     BuyerRefuseInvitation(invitationId);
                     break;
                 case (int)InvitationStatus.Values.Cleared:
-                    UpdateInviationsStatus(invitationId, invitationStatus);
                     BuyerClearRefusedInvitation(invitationId);
+                    DeleteInvitation(invitationId);
                     break;
                 default:
                     break;
@@ -74,6 +74,9 @@ namespace Test.Helper
                 {
                     var acceptedInvitation = new InvitationsAccepted
                     {
+                        #if (DEBUG )
+                            InvitationsAcceptedId = _uow.InvitationAcceptedRepository.All.Max(x => x.InvitationsAcceptedId) + 1,
+                        #endif
                         BuyerId = invitation.BuyerId,
                         SellerId = invitation.SellerId,
                         BoothId = invitation.BoothId,
@@ -99,6 +102,9 @@ namespace Test.Helper
                 {
                     var refusedInvitation = new InvitationsRefuseds
                     {
+#if (DEBUG )
+                        InvitationRefusedId = _uow.InvitationRefusedRepository.All.Max(x => x.InvitationRefusedId) + 1,
+#endif
                         BuyerId = invitation.BuyerId,
                         SellerId = invitation.SellerId,
                         BoothId = invitation.BoothId,
@@ -121,6 +127,15 @@ namespace Test.Helper
             _uow.Save();
         }
 
+        private void DeleteInvitation(int invitationId)
+        {
+            var invitation = _uow.InvitationsRepository.FindBy(x => x.InvitationId == invitationId).FirstOrDefault();
+
+            if (invitation == null) return;
+            _uow.InvitationsRepository.Delete(invitation);
+            _uow.Save();
+        }
+
         private void CreateInvitationSchedule(InvitationsAccepted invitationAccepted)
         {
             var existingInvitationCount =_uow.InvitationScheduleRepository.Count(x => x.BuyerId == invitationAccepted.BuyerId && x.SellerId == invitationAccepted.SellerId);
@@ -129,6 +144,9 @@ namespace Test.Helper
             {
                 var newScheduledInvitation = new InvitationSchedules
                 {
+#if (DEBUG )
+                    InvitationScheduleId = _uow.InvitationScheduleRepository.All.Max(x => x.InvitationScheduleId) + 1,
+#endif
                     BuyerId = invitationAccepted.BuyerId,
                     SellerId = invitationAccepted.SellerId,
                     BoothId = invitationAccepted.BoothId,

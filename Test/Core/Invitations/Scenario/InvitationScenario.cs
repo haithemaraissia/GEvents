@@ -74,13 +74,13 @@ namespace Test.Core.Invitations.Scenario
             BuyerRefuseInvitation();
             Assert.AreEqual(1, GetCurrentSellerAcceptedInvitationCount());
             Assert.AreEqual(1, GetCurrentBuyerAcceptedInvitationCount());
-            Assert.AreEqual(1, GetCurrentSellerRefusedInvitationCount());
-            Assert.AreEqual(1, GetCurrentBuyerRefusedInvitationCount());
+            Assert.AreEqual(0, GetCurrentSellerRefusedInvitationCount());
+            Assert.AreEqual(0, GetCurrentBuyerRefusedInvitationCount());
             #endregion
 
             #region Seller Send a second Invitation to the Buyer, it won't be added because the invitation does exist
 
-            Assert.AreEqual(4, GetCurrentSellerInvitationCount());
+            Assert.AreEqual(3, GetCurrentSellerInvitationCount());
             Assert.AreEqual(1, GetCurrentBuyerInvitationCount());
             if (!DoesInvitationExist(1, 4))
             {
@@ -95,7 +95,7 @@ namespace Test.Core.Invitations.Scenario
                 _uow.InvitationsRepository.Add(newSecondInvitation);
                 _uow.Save();
             }
-            Assert.AreEqual(4, GetCurrentSellerInvitationCount());
+            Assert.AreEqual(3, GetCurrentSellerInvitationCount());
             Assert.AreEqual(1, GetCurrentBuyerInvitationCount());
 
 
@@ -103,7 +103,7 @@ namespace Test.Core.Invitations.Scenario
 
             #region Seller send an Invitation to a second Buyer
 
-            Assert.AreEqual(4, GetCurrentSellerInvitationCount());
+            Assert.AreEqual(3, GetCurrentSellerInvitationCount());
             Assert.AreEqual(1, GetCurrentBuyerInvitationCount());
             if (!DoesInvitationExist(1, 5))
             {
@@ -117,7 +117,7 @@ namespace Test.Core.Invitations.Scenario
                 };
                 _uow.InvitationsRepository.Add(newThirdInvitation);
                 _uow.Save();
-                Assert.AreEqual(5, GetCurrentSellerInvitationCount());
+                Assert.AreEqual(4, GetCurrentSellerInvitationCount());
                 Assert.AreEqual(1, GetCurrentBuyerInvitationCount());
             }
 
@@ -134,8 +134,8 @@ namespace Test.Core.Invitations.Scenario
 
             #region Buyer Delete refused Invitation
 
-            Assert.AreEqual(1, GetCurrentSellerRefusedInvitationCount());
-            Assert.AreEqual(1, GetCurrentBuyerRefusedInvitationCount());
+            Assert.AreEqual(0, GetCurrentSellerRefusedInvitationCount());
+            Assert.AreEqual(0, GetCurrentBuyerRefusedInvitationCount());
             var refusedInvitation = _uow.InvitationRefusedRepository.FindBy(x => x.BuyerId == BuyerId).LastOrDefault();
          
             if (refusedInvitation != null)
@@ -304,7 +304,7 @@ namespace Test.Core.Invitations.Scenario
 
         #region Buyer
 
-        private const int BuyerId = 1;
+        private const int BuyerId = 5;
 
         private int GetCurrentBuyerInvitationCount()
         {
