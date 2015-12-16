@@ -125,6 +125,7 @@
     <Compile Include="Fake\Model\GoodData\FakeUserTypes.cs" />
     <Compile Include="Fake\Model\Invitations\Seller\SellerInvitations.cs" />
     <Compile Include="Fake\Model\Util\DateUtil.cs" />
+    <Compile Include="Fake\Model\Util\FeedbackStatistics.cs" />
     <Compile Include="Fake\Model\Util\InvitationStatus.cs" />
     <Compile Include="Fake\Model\Util\EventTypes.cs" />
     <Compile Include="Fake\Model\Util\EventRateSection.cs" />

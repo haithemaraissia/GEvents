@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DAL.Data.UnitofWork;
+using DAL.Fake.Model.Util;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Test.Base;
 
@@ -29,21 +27,36 @@ namespace Test.Core.FeedBacks
 
         #endregion
 
-        public void RatePercentage()
+        [TestMethod]
+        public void FeedBackRateStatistics()
         {
-            //Get Rate Percentage per caregroies
-            var feedbacks = _uow.FeedBackRepository.All.GroupBy(x => x.SectionId);
-            foreach (var feedback in feedbacks)
-            {
-                var total = 0;
-                total = _uow.FeedBackRepository.FindBy(x => x.RateId == feedback.Key).Count();
-            }
+            var feedbackgroups = _uow.FeedBackRepository.All.GroupBy(x => new {x.SectionId })
+                .Select(g => new FeedbackStatistics
+                {
+                    Average = Math.Round(g.Average(p => p.RateId), 2),
+                    SectionId = g.Key.SectionId,
+                    Percentage = Math.Round((g.Average(p => p.RateId) * 100)/(int)RateCode.Values.VeryGood,2),
+                    SectionName = GetSectionNameBySectionId(g.Key.SectionId),
+                    NumberOfRaters = g.Count()
+                });
 
-            //Get number of people that submit feedback
-             var raters = _uow.FeedBackRepository.All.GroupBy(x => x.SectionId).Count();
+            Assert.AreEqual(3,feedbackgroups.Count());
+            var eventSection = feedbackgroups.FirstOrDefault(x => x.SectionId == (int) EventRateSection.Values.Events);
+            if (eventSection != null)
+            {
+                Assert.AreEqual(3.67, eventSection.Average);
+                Assert.AreEqual(73.33, eventSection.Percentage);
+                Assert.AreEqual(1, eventSection.NumberOfRaters);
+            }
         }
 
-        //Get those rate and test them.
+        private string GetSectionNameBySectionId(int sectionId )
+        {
+            var eventRateSection = _uow.EventRateSectionRepository.FindBy(x=>x.SectionId == sectionId).FirstOrDefault();
+            if (eventRateSection != null)
+                return eventRateSection.SectionValue.ToString();
+            return "section Name";
+        }
 
     }
 }

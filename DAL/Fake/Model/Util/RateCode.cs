@@ -4,11 +4,11 @@ namespace DAL.Fake.Model.Util
     {
         public enum Values
         {
-            VeryGood = 1,
-            Good = 2,
+            VeryGood = 5,
+            Good = 4,
             Netural = 3,
-            Bad = 4,
-            VeryBad = 5
+            Bad = 2,
+            VeryBad = 1
         }
     }
 }
